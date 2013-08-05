@@ -1,0 +1,44 @@
+<item>
+	<title>Ya está disponible Rails 3.1 beta 1</title>
+	<link>http://old.gemaroja.com/ya-esta-disponible-rails-31-beta-1</link>
+	<pubDate>Thu May 05 15:52:06 -0700 2011</pubDate>
+	
+	<dc:creator><![CDATA[Jano González]]></dc:creator>
+	
+	
+		<category domain="tag" nicename="noticias"><![CDATA[noticias]]></category>
+	
+		<category domain="tag" nicename="rails"><![CDATA[rails]]></category>
+	
+
+	<category><![CDATA[Uncategorized]]></category>
+
+	<category domain="category" nicename="uncategorized"><![CDATA[Uncategorized]]></category>
+
+  <guid isPermaLink="false">http://old.gemaroja.com/ya-esta-disponible-rails-31-beta-1</guid>
+	<description></description>
+	<content:encoded><![CDATA[<p>En el <a href="http://weblog.rubyonrails.org/">blog oficial de Ruby on Rails</a> hoy se anunció que está disponible el primer beta de Rails 3.1, instalarlo es tan fácil como:</p>
+
+<div class="CodeRay">
+  <div class="code"><pre>gem install rails --pre</pre></div>
+</div>
+
+
+<p>Revisa el <a href="http://weblog.rubyonrails.org/2011/5/5/rails-3-1-beta-1-released">anuncio original</a>.</p>]]></content:encoded>
+	<excerpt:encoded><![CDATA[En el blog oficial de Ruby on Rails hoy se anunció que está disponible el primer beta de Rails 3.1, instalarlo es tan fácil como: gem install rails --pre Revisa el anuncio original.]]></excerpt:encoded>	
+
+	<wp:post_date>Thu May 05 15:52:06 -0700 2011</wp:post_date>
+	<wp:post_date_gmt>Thu May 05 15:52:06 -0700 2011</wp:post_date_gmt>
+	<wp:comment_status>open</wp:comment_status>
+	<wp:ping_status>open</wp:ping_status>
+	<wp:post_id>51965472</wp:post_id>
+	<wp:post_name>ya-esta-disponible-rails-31-beta-1</wp:post_name>
+	<wp:status>publish</wp:status>
+	<wp:post_parent>0</wp:post_parent>
+	<wp:menu_order>0</wp:menu_order>
+	<wp:post_type>post</wp:post_type>
+	<wp:post_password></wp:post_password>
+	<wp:is_sticky>0</wp:is_sticky>
+
+	
+</item>

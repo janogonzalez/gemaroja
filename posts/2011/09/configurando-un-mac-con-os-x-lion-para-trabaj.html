@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8'>
+<link href='../../../exports.css' rel='stylesheet'>
+<link href='../../../exports.css' rel='stylesheet'>
+
+</head>
+<body>
+<div id='wrap'>
+<div id='header'>
+<h1>Gema Roja</h1>
+<h2>This is an archived post
+This is an archived post
+</h2>
+</div>
+<div id='content'><div id='nav'>
+<a href="../../../posts/2011/09/railsinstaller-2-para-windows-disponible.html">Previous</a>
+&nbsp; 
+<a href="../../../index.html">Index</a>
+&nbsp; 
+<a href="../../../posts/2011/09/encuentro-linux-2011.html">Next</a>
+</div>
+<div class='post'>
+<div class='post_header'>
+<h3>Configurando un Mac con OS X Lion para trabajar con Ruby</h3>
+<div class='post_info'>
+<span class='post_time'>September  6 2011,  4:08 PM</span>
+<span class='author'>&nbsp;by Jano González</span>
+</div>
+</div>
+<div class='post_body'><p>Si te compraste un Mac hace poco y quieres trabajar con Ruby, siguiendo este sencillo tutorial podrás instalar lo necesario para trabajar sin dolores de cabeza:</p>
+
+<h2>Paso 1: XCode</h2>
+
+<p>Como vamos a compilar Ruby y otros paquetes desde la fuente debemos instalar <a href="http://itunes.apple.com/us/app/xcode/id448457090?mt=12">XCode 4.1</a>, el cual está disponible en forma gratuita en la App Store (ADVERTENCIA: Pesa un poco más de 3GB). Si eres un usuario más avanzado y quieres ahorrar espacio, puedes intentar instalar sólo GCC y las herramientas relacionadas desde el <a href="https://github.com/kennethreitz/osx-gcc-installer">repositorio de Kenneth Reitz</a>, pero esta guía asume que instalarás XCode completo (Ya que yo no he probado ese método :P).</p>
+
+<h2>Paso 2: Homebrew</h2>
+
+<p>La forma más fácil de instalar paquetes en nuestro equipo es mediante <a href="http://mxcl.github.com/homebrew/">Homebrew</a>, que baja y compila la mayoría del SW que necesitamos para desarrollar. Para instalarlo basta con correr el siguiente comando:</p>
+
+<div class="CodeRay">
+  <div class="code"><pre>/usr/bin/ruby -e &quot;$(curl -fsSL https://raw.github.com/gist/323731)&quot;</pre></div>
+</div>
+
+
+<p>Si vas a trabajar con Rails instala tu base de datos favorita, por ejemplo:</p>
+
+<div class="CodeRay">
+  <div class="code"><pre>brew install postgresql</pre></div>
+</div>
+
+
+<p>Y luego sigue las instrucciones específicas.</p>
+
+<h2>Paso 3: RVM</h2>
+
+<p>Si bien ya tenemos Ruby en nuestro sistema, lo mejor es instalar <a href="http://beginrescueend.com/">RVM</a> que nos permitirá utilizar distintas versiones de Ruby en nuestro sistema, para mayor detalle sigue nuestra <a href="http://gemaroja.com/manejando-distintas-versiones-de-ruby-con-rvm">guía de RVM</a>.</p>
+
+<h2>Opcional: Configurar <code>.gemrc</code></h2>
+
+<p>En mi caso, no instalo la documentación de las gemas porque siempre la veo en internet. Lo anterior se hace configurando el archivo <code>.gemrc</code> de nuestro <code>$HOME</code>:</p>
+
+<div class="CodeRay">
+  <div class="code"><pre><span class="head"><span class="head">---</span></span> 
+<span class="key">gem</span>: <span class="string"><span class="content">--no-ri --no-rdoc</span></span></pre></div>
+</div>
+
+
+<h2>Bonus track: JRuby</h2>
+
+<p>Yo uso bastante <a href="http://jruby.org/">JRuby</a>, instalarlo es muy sencillo. Como en OS X Lion no viene una JVM, cuando ejecutes el comando <code>java</code> por primera vez te guiará para instalarla:</p>
+
+<div class="CodeRay">
+  <div class="code"><pre>java</pre></div>
+</div>
+
+
+<p>Una vez instalada la JVM, basta con ejecutar</p>
+
+<div class="CodeRay">
+  <div class="code"><pre>rvm install jruby</pre></div>
+</div>
+
+
+<h2>Recomendaciones</h2>
+
+<p>Ahora ya puedes trabajar sin problemas en tu máquina, para no tener dolores de cabeza te recomiendo crear un gemset por cada proyecto y automatizar la forma en que levantas los ambientes con alguna herramienta como <a href="http://gemaroja.com/automatiza-tu-terminal-con-terminitor">Terminitor</a>.</p></div>
+<div class='post_tags'>
+<h4>Tags</h4>
+<div class='post_tags_list'>tutorial</div>
+</div>
+<div class='post_responses'>
+<h4>1272 views and 5 responses</h4>
+<ul class='post_responses list'>
+<li class='response clearfix'>
+<div class='response_header'>
+<div class='response_time'>Sep  7 2011,  6:57 AM</div>
+<div class='response_name'>Jorge Díaz responded:</div>
+</div>
+<div class='response_body'>Early adopter!! :)</div>
+</li>
+<li class='response clearfix'>
+<div class='response_header'>
+<div class='response_time'>Sep  7 2011,  8:27 PM</div>
+<div class='response_name'>hmartz responded:</div>
+</div>
+<div class='response_body'>Hola, soy usuario nuevo de Mac y estoy siguiendo tu guía. Actualmente estoy instalando XCode sería bueno contar que su descarga puede ser demorada, según la conexión, son > 3 GB!!.<br />Saludos!</div>
+</li>
+<li class='response clearfix'>
+<div class='response_header'>
+<div class='response_time'>Sep  8 2011,  6:27 AM</div>
+<div class='response_name'>Jano González responded:</div>
+</div>
+<div class='response_body'>Se agregó la advertencia del tamaño de XCode!</div>
+</li>
+<li class='response clearfix'>
+<div class='response_header'>
+<div class='response_time'>Jan 24 2012, 10:50 AM</div>
+<div class='response_name'>Mario responded:</div>
+</div>
+<div class='response_body'>Hola, les comparto otro video en donde explicamos como instalar Ruby en OSX Lion. Saludos!<p>002 ~ Como instalar Ruby en Mac OSX Lion<br /><a href="http://sinatracasts.com" rel="nofollow">http://sinatracasts.com</a></p></div>
+</li>
+<li class='response clearfix'>
+<div class='response_header'>
+<div class='response_time'>Jan 25 2012,  9:50 AM</div>
+<div class='response_name'>hmartz responded:</div>
+</div>
+<div class='response_body'>@Mario muy interesantes los screencasts! me tome el atrevimiento de poner tu link en Noticiashacker.com un HN pero en español no se si lo cnozcas te invito a votarlo. <a href="http://www.noticiashacker.com/noticia/screencasts-de-desarrollo-web-en-ruby-utilizando-sinatra-en-espaol" rel="nofollow">http://www.noticiashacker.com/noticia/screencasts-de-desarrollo-web-en-ruby-u...</a></div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>

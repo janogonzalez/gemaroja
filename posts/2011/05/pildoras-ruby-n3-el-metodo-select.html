@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8'>
+<link href='../../../exports.css' rel='stylesheet'>
+<link href='../../../exports.css' rel='stylesheet'>
+
+</head>
+<body>
+<div id='wrap'>
+<div id='header'>
+<h1>Gema Roja</h1>
+<h2>This is an archived post
+This is an archived post
+</h2>
+</div>
+<div id='content'><div id='nav'>
+<a href="../../../posts/2011/05/ya-esta-disponible-rails-31-beta-1.html">Previous</a>
+&nbsp; 
+<a href="../../../index-3.html">Index</a>
+&nbsp; 
+<a href="../../../posts/2011/05/pildoras-ruby-n2-el-metodo-map.html">Next</a>
+</div>
+<div class='post'>
+<div class='post_header'>
+<h3>Píldoras Ruby Nº3: El método select</h3>
+<div class='post_info'>
+<span class='post_time'>May  3 2011,  4:45 PM</span>
+<span class='author'>&nbsp;by Jano González</span>
+</div>
+</div>
+<div class='post_body'><p>En la <a href="http://gemaroja.com/pildoras-ruby-n2-el-metodo-map">píldora de ayer</a> vimos el método map, hoy revisaremos otro método muy útil de las clases que incluyen el módulo <a href="http://www.ruby-doc.org/core/classes/Enumerable.html">Enumerable</a>. El método select entrega todos los elementos para los que el bloque de código entregado no se evalúa como false.</p>
+
+<p>Por ejemplo con un <a href="http://www.ruby-doc.org/core/classes/Array.html">Array</a>:</p>
+
+<div class="CodeRay">
+  <div class="code"><pre><span class="comment"># Produce el resultado [2,4]</span>
+[<span class="integer">1</span>,<span class="integer">2</span>,<span class="integer">3</span>,<span class="integer">4</span>,<span class="integer">5</span>].select { |n| n % <span class="integer">2</span> == <span class="integer">0</span> }</pre></div>
+</div>
+
+
+<p>O con un <a href="http://www.ruby-doc.org/core/classes/Range.html">Range</a>:</p>
+
+<div class="CodeRay">
+  <div class="code"><pre><span class="comment"># Produce el resultado [2,4]</span>
+(<span class="integer">1</span>..<span class="integer">5</span>).map [<span class="integer">1</span>,<span class="integer">2</span>,<span class="integer">3</span>,<span class="integer">4</span>,<span class="integer">5</span>].select { |n| n % <span class="integer">2</span> == <span class="integer">0</span> }</pre></div>
+</div>
+
+
+<p>Si lo aplicamos sobre <a href="http://www.ruby-doc.org/core/classes/Enumerable.html">Hash</a>, producirá otro:</p>
+
+<div class="CodeRay">
+  <div class="code"><pre><span class="comment"># Produce el resultado { :b=&gt;2 }</span>
+{ <span class="symbol">:a</span> =&gt; <span class="integer">1</span>, <span class="symbol">:b</span> =&gt; <span class="integer">2</span>, <span class="symbol">:c</span> =&gt; <span class="integer">3</span> }.select { |k,v| v % <span class="integer">2</span> == <span class="integer">0</span> }</pre></div>
+</div>
+
+
+<p>¡Pronto nuevas píldoras! Y recuerda que esta semana tendremos nuevas noticias de la <a href="http://www.startechconf.com/">StarTechConf 2011</a>.</p></div>
+<div class='post_tags'>
+<h4>Tags</h4>
+<div class='post_tags_list'>píldoras</div>
+</div>
+<div class='post_responses'>
+<h4>386 views and 4 responses</h4>
+<ul class='post_responses list'>
+<li class='response clearfix'>
+<div class='response_header'>
+<div class='response_time'>May  3 2011,  5:01 PM</div>
+<div class='response_name'>hvergara (Twitter) responded:</div>
+</div>
+<div class='response_body'>Ya que Ruby comparte varias similitudes con JavaScript:<p>[1,2,3,4,5].filter(function(n) { return n % 2 == 0 }) == [2,4]</p><p>y para objetos que son enumerables (NodeList por ejemplo, o cualquier Object)</p><p>var divs = document.getElementsByTagName('div'); /* retorna [NodeList Object] */<br />Array.prototype.filter.call(divs, function(node) { ..... })</p><p>Sigue con las píldoras!<br />Saludos!</p></div>
+</li>
+<li class='response clearfix'>
+<div class='response_header'>
+<div class='response_time'>May  3 2011,  5:07 PM</div>
+<div class='response_name'>Jano González responded:</div>
+</div>
+<div class='response_body'>Excelente aporte Héctor!</div>
+</li>
+<li class='response clearfix'>
+<div class='response_header'>
+<div class='response_time'>May 12 2011,  1:14 PM</div>
+<div class='response_name'>niedbalski (Twitter) responded:</div>
+</div>
+<div class='response_body'>python way:<br />>>> x = [ 2, 4, 6, 7, 21]<br />>>> filter(lambda x: ( not x % 2 ), x)</div>
+</li>
+<li class='response clearfix'>
+<div class='response_header'>
+<div class='response_time'>May 12 2011,  2:52 PM</div>
+<div class='response_name'>Jano González responded:</div>
+</div>
+<div class='response_body'>Gracias Jorge :)</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>

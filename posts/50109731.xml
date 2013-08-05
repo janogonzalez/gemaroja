@@ -1,0 +1,111 @@
+<item>
+	<title>Automatiza tu terminal con Terminitor</title>
+	<link>http://old.gemaroja.com/automatiza-tu-terminal-con-terminitor</link>
+	<pubDate>Wed Apr 20 16:32:21 -0700 2011</pubDate>
+	
+	<dc:creator><![CDATA[Jano González]]></dc:creator>
+	
+	
+		<category domain="tag" nicename="art%C3%ADculos"><![CDATA[artículos]]></category>
+	
+		<category domain="tag" nicename="gemas"><![CDATA[gemas]]></category>
+	
+
+	<category><![CDATA[Uncategorized]]></category>
+
+	<category domain="category" nicename="uncategorized"><![CDATA[Uncategorized]]></category>
+
+  <guid isPermaLink="false">http://old.gemaroja.com/automatiza-tu-terminal-con-terminitor</guid>
+	<description></description>
+	<content:encoded><![CDATA[<p>Muchas veces cuando desarrollamos hacemos tareas repetitivas que desearíamos automatizar, por ejemplo crear nuevas ventanas o tabs de nuestra terminal y ejecutar los comandos que nos permiten trabajar en nuestros proyectos.</p>
+
+<p>De la necesidad anterior nace <a href="https://github.com/achiu/terminitor">Terminitor</a>, una gema que permite automatizar el uso de una terminal en Mac OS X y Linux.</p>
+
+<p>Para comenzar tenemos que instalar la gema con:</p>
+
+<div class="CodeRay">
+  <div class="code"><pre>gem install terminitor</pre></div>
+</div>
+
+
+<p>Luego completamos la instalación ejecutando:</p>
+
+<div class="CodeRay">
+  <div class="code"><pre>terminitor init</pre></div>
+</div>
+
+
+<p>Lo anterior creará carpeta de configuración <code>.terminitor</code> en nuestro <code>$HOME</code>. Ahora ya podemos crear un nuevo <em>termfile</em>, ejecutando:</p>
+
+<div class="CodeRay">
+  <div class="code"><pre>terminitor edit nombre_proyecto</pre></div>
+</div>
+
+
+<p>Esto creará el <em>termfile</em> y lo abrirá en el editor del sistema. Usando el DSL provisto por la gema creamos los pasos de nuestra automatización. Por ejemplo, para proyectos Rails yo uso:</p>
+
+<div class="CodeRay">
+  <div class="code"><pre><span class="comment"># Este comentario aparecerá cuando listes tus termfiles</span>
+
+setup <span class="string"><span class="delimiter">'</span><span class="content">echo &quot;setup&quot;</span><span class="delimiter">'</span></span>
+
+<span class="comment"># Crea una nueva ventana</span>
+window <span class="keyword">do</span>
+  <span class="comment"># Se ejecuta antes del resto de lo comandos  </span>
+  before { run <span class="string"><span class="delimiter">&quot;</span><span class="content">cd ~/Projects/nombre_proyecto</span><span class="delimiter">&quot;</span></span> }
+
+  <span class="comment"># Ejecuta un programa en la ventana actual</span>
+  run <span class="string"><span class="delimiter">&quot;</span><span class="content">mate .</span><span class="delimiter">&quot;</span></span>
+
+  <span class="comment"># Crea nuevos tabs y ejecuta comandos en ellos</span>
+  tab <span class="string"><span class="delimiter">&quot;</span><span class="content">spork</span><span class="delimiter">&quot;</span></span>
+  tab <span class="string"><span class="delimiter">&quot;</span><span class="content">watchr specs.watchr.rb</span><span class="delimiter">&quot;</span></span>
+  tab <span class="string"><span class="delimiter">&quot;</span><span class="content">tail -f log/test.log</span><span class="delimiter">&quot;</span></span>
+  tab <span class="string"><span class="delimiter">&quot;</span><span class="content">rails s</span><span class="delimiter">&quot;</span></span>
+  tab <span class="string"><span class="delimiter">&quot;</span><span class="content">rails c</span><span class="delimiter">&quot;</span></span>
+<span class="keyword">end</span></pre></div>
+</div>
+
+
+<p>Una vez grabado el <em>termfile</em> ya podemos ejecutar la automación con:</p>
+
+<div class="CodeRay">
+  <div class="code"><pre>terminitor start nombre_proyecto</pre></div>
+</div>
+
+
+<p>También podemos listar todos nuestros <em>termfiles</em> con:</p>
+
+<div class="CodeRay">
+  <div class="code"><pre>terminitor list</pre></div>
+</div>
+
+
+<p>Terminitor soporta los siguientes terminales:</p>
+
+<ul>
+<li>Terminal de Mac OS X</li>
+<li><a href="http://iterm.sourceforge.net/">iTerm</a> (<a href="http://code.google.com/p/iterm2/">iTerm2</a> también)</li>
+<li><a href="http://konsole.kde.org/">KDE Konsole</a></li>
+<li><a href="http://www.tenshu.net/terminator/">Terminator</a></li>
+</ul>
+
+
+<p>Para obtener mayor información y ver el código fuente, visita la <a href="https://github.com/achiu/terminitor">página del proyecto</a>.</p>]]></content:encoded>
+	<excerpt:encoded><![CDATA[Muchas veces cuando desarrollamos hacemos tareas repetitivas que desearíamos automatizar, por ejemplo crear nuevas ventanas o tabs de nuestra terminal y ejecutar los comandos que nos permiten trabajar en nuestros proyectos. De la necesidad anterio...]]></excerpt:encoded>	
+
+	<wp:post_date>Wed Apr 20 16:32:21 -0700 2011</wp:post_date>
+	<wp:post_date_gmt>Wed Apr 20 16:32:21 -0700 2011</wp:post_date_gmt>
+	<wp:comment_status>open</wp:comment_status>
+	<wp:ping_status>open</wp:ping_status>
+	<wp:post_id>50109731</wp:post_id>
+	<wp:post_name>automatiza-tu-terminal-con-terminitor</wp:post_name>
+	<wp:status>publish</wp:status>
+	<wp:post_parent>0</wp:post_parent>
+	<wp:menu_order>0</wp:menu_order>
+	<wp:post_type>post</wp:post_type>
+	<wp:post_password></wp:post_password>
+	<wp:is_sticky>0</wp:is_sticky>
+
+	
+</item>

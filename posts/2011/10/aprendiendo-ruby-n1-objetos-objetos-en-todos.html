@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8'>
+<link href='../../../exports.css' rel='stylesheet'>
+<link href='../../../exports.css' rel='stylesheet'>
+
+</head>
+<body>
+<div id='wrap'>
+<div id='header'>
+<h1>Gema Roja</h1>
+<h2>This is an archived post
+This is an archived post
+</h2>
+</div>
+<div id='content'><div id='nav'>
+<a href="../../../posts/2011/10/nos-vemos-en-rubyconf-uruguay.html">Previous</a>
+&nbsp; 
+<a href="../../../index.html">Index</a>
+&nbsp; 
+<a href="../../../posts/2011/09/dando-los-primeros-pasos-en-ruby.html">Next</a>
+</div>
+<div class='post'>
+<div class='post_header'>
+<h3>Aprendiendo Ruby Nº1: Objetos, objetos en todos lados</h3>
+<div class='post_info'>
+<span class='post_time'>October  4 2011,  4:11 PM</span>
+<span class='author'>&nbsp;by Jano González</span>
+</div>
+</div>
+<div class='post_body'><p>Te damos la bienvenida a esta nueva serie de tutoriales de iniciación en el lenguaje Ruby. Cada entrega será una <em>micro-lección</em> e incluirá ejercicios para que estudies por tu cuenta.</p>
+
+<p><strong>IMPORTANTE</strong>: Esta serie asume que programas en algún otro lenguaje y que estás usando la versión 1.9.2 de Ruby.</p>
+
+<h2>Objetos, objetos en todos lados</h2>
+
+<p>En Ruby todos los valores que manipulamos son objetos, desde un simple entero hasta una compleja estructura de datos. Para comprobarlo iniciemos <code>irb</code> para jugar con los objetos más básicos:</p>
+
+<div class="CodeRay">
+  <div class="code"><pre>$ irb</pre></div>
+</div>
+
+
+<p>Una vez dentro de la consola, prueba cada una de estas líneas:</p>
+
+<div class="CodeRay">
+  <div class="code"><pre><span class="comment"># El valor 100</span>
+<span class="integer">100</span>
+
+<span class="comment"># Podemos invocar un método sobre el objeto</span>
+<span class="integer">100</span>.next
+
+<span class="comment"># El objeto tiene una clase</span>
+<span class="integer">100</span>.class
+
+<span class="comment"># Nos indica si el número es par</span>
+<span class="integer">100</span>.even?</pre></div>
+</div>
+
+
+<p>Usando el operador <code>.</code> podemos invocar métodos en un objeto, en este caso el método <code>next</code> nos entregó el siguiente entero, el método <code>class</code> nos indicó que el objeto pertenece a la clase <a href="http://ruby-doc.org/core/Fixnum.html">FixNum</a> y finalmente el método <code>even?</code> nos indicó que el número es par. Cabe señalar que es una convención en Ruby que los métodos cuyo nombre termina con el caracter <code>?</code> entreguen un valor booleano (verdadero o false).</p>
+
+<p>Ahora probemos otros ejemplos sencillos:</p>
+
+<div class="CodeRay">
+  <div class="code"><pre><span class="comment"># Podemos encadenar llamadas</span>
+<span class="integer">100</span>.next.next
+
+<span class="comment"># Cuál es la clase de una clase?</span>
+<span class="integer">100</span>.class.class</pre></div>
+</div>
+
+
+<p>Como los métodos retornan otro objeto, podemos invocar otro método sobre ese resultado, encadenando las llamadas. En Ruby las clases también son objetos, más específicamente son instancias de la clase <a href="http://ruby-doc.org/core/Class.html">Class</a>.</p>
+
+<p>También existen métodos con tratamiento especial:</p>
+
+<div class="CodeRay">
+  <div class="code"><pre><span class="comment"># El método + suma dos números</span>
+<span class="integer">99</span>.+(<span class="integer">1</span>)
+
+<span class="comment"># Pero es un poco más cómodo escribir...</span>
+<span class="integer">99</span> + <span class="integer">1</span></pre></div>
+</div>
+
+
+<p>En el ejemplo anterior se aprecia que los operadores en Ruby en realidad son llamadas a métodos.</p>
+
+<p>Existen otras formas de declarar literales numéricos:</p>
+
+<div class="CodeRay">
+  <div class="code"><pre><span class="comment"># Es posible separar dígitos con _ para mejorar la legibilidad</span>
+<span class="integer">24_500_123_932</span>
+
+<span class="comment"># Literales binarios</span>
+<span class="integer">0b1111</span>
+<span class="integer">0</span><span class="constant">B1111</span>
+
+<span class="comment"># Literales octales</span>
+<span class="integer">0755</span>
+
+<span class="comment"># Literales hexadecimales</span>
+<span class="integer">0x1337</span>
+<span class="integer">0</span><span class="constant">X1337</span>
+
+<span class="comment"># También se puede usar _ cuando declaramos números en otras bases</span>
+<span class="integer">0b1010_1010</span></pre></div>
+</div>
+
+
+<h3>Resumen</h3>
+
+<p>Con estos simples ejemplos aprendimos varias cosas:</p>
+
+<ul>
+<li>Es posible instanciar algunos objetos usando valores literales.</li>
+<li>Todos los valores que manipulamos en Ruby son objetos.</li>
+<li>Hay operadores que en realidad son llamadas a métodos.</li>
+<li>Existen varias formas de declarar literales numéricos.</li>
+</ul>
+
+
+<h3>Ejercicios</h3>
+
+<ul>
+<li>Descubre qué otros métodos de tipo operador tiene la clase <a href="http://ruby-doc.org/core/Fixnum.html">FixNum</a> y realiza algunos cálculos sencillos con ellos.</li>
+<li>Prueba encadenar otras combinaciones de métodos.</li>
+<li>Prueba los ejemplos de esta lección usando los literales <code>100.0</code> y <code>10_000_000_000_000_000_000</code>, ¿Qué diferencias notas?</li>
+</ul></div>
+<div class='post_tags'>
+<h4>Tags</h4>
+<div class='post_tags_list'>aprendiendoruby, tutorial</div>
+</div>
+<div class='post_responses'>
+<h4>1669 views and 1 response</h4>
+<ul class='post_responses list'>
+<li class='response clearfix'>
+<div class='response_header'>
+<div class='response_time'>Oct  6 2011,  5:29 AM</div>
+<div class='response_name'>Ben Orenstein  responded:</div>
+</div>
+<div class='response_body'>Grácias por este léccion!</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>

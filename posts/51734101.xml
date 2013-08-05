@@ -1,0 +1,128 @@
+<item>
+	<title>Píldoras Ruby Nº3: El método select</title>
+	<link>http://old.gemaroja.com/pildoras-ruby-n3-el-metodo-select</link>
+	<pubDate>Tue May 03 16:45:29 -0700 2011</pubDate>
+	
+	<dc:creator><![CDATA[Jano González]]></dc:creator>
+	
+	
+		<category domain="tag" nicename="p%C3%ADldoras"><![CDATA[píldoras]]></category>
+	
+
+	<category><![CDATA[Uncategorized]]></category>
+
+	<category domain="category" nicename="uncategorized"><![CDATA[Uncategorized]]></category>
+
+  <guid isPermaLink="false">http://old.gemaroja.com/pildoras-ruby-n3-el-metodo-select</guid>
+	<description></description>
+	<content:encoded><![CDATA[<p>En la <a href="http://gemaroja.com/pildoras-ruby-n2-el-metodo-map">píldora de ayer</a> vimos el método map, hoy revisaremos otro método muy útil de las clases que incluyen el módulo <a href="http://www.ruby-doc.org/core/classes/Enumerable.html">Enumerable</a>. El método select entrega todos los elementos para los que el bloque de código entregado no se evalúa como false.</p>
+
+<p>Por ejemplo con un <a href="http://www.ruby-doc.org/core/classes/Array.html">Array</a>:</p>
+
+<div class="CodeRay">
+  <div class="code"><pre><span class="comment"># Produce el resultado [2,4]</span>
+[<span class="integer">1</span>,<span class="integer">2</span>,<span class="integer">3</span>,<span class="integer">4</span>,<span class="integer">5</span>].select { |n| n % <span class="integer">2</span> == <span class="integer">0</span> }</pre></div>
+</div>
+
+
+<p>O con un <a href="http://www.ruby-doc.org/core/classes/Range.html">Range</a>:</p>
+
+<div class="CodeRay">
+  <div class="code"><pre><span class="comment"># Produce el resultado [2,4]</span>
+(<span class="integer">1</span>..<span class="integer">5</span>).map [<span class="integer">1</span>,<span class="integer">2</span>,<span class="integer">3</span>,<span class="integer">4</span>,<span class="integer">5</span>].select { |n| n % <span class="integer">2</span> == <span class="integer">0</span> }</pre></div>
+</div>
+
+
+<p>Si lo aplicamos sobre <a href="http://www.ruby-doc.org/core/classes/Enumerable.html">Hash</a>, producirá otro:</p>
+
+<div class="CodeRay">
+  <div class="code"><pre><span class="comment"># Produce el resultado { :b=&gt;2 }</span>
+{ <span class="symbol">:a</span> =&gt; <span class="integer">1</span>, <span class="symbol">:b</span> =&gt; <span class="integer">2</span>, <span class="symbol">:c</span> =&gt; <span class="integer">3</span> }.select { |k,v| v % <span class="integer">2</span> == <span class="integer">0</span> }</pre></div>
+</div>
+
+
+<p>¡Pronto nuevas píldoras! Y recuerda que esta semana tendremos nuevas noticias de la <a href="http://www.startechconf.com/">StarTechConf 2011</a>.</p>]]></content:encoded>
+	<excerpt:encoded><![CDATA[En la píldora de ayer vimos el método map, hoy revisaremos otro método muy útil de las clases que incluyen el módulo Enumerable. El método select entrega todos los elementos para los que el bloque de código entregado no se evalúa como fals...]]></excerpt:encoded>	
+
+	<wp:post_date>Tue May 03 16:45:29 -0700 2011</wp:post_date>
+	<wp:post_date_gmt>Tue May 03 16:45:29 -0700 2011</wp:post_date_gmt>
+	<wp:comment_status>open</wp:comment_status>
+	<wp:ping_status>open</wp:ping_status>
+	<wp:post_id>51734101</wp:post_id>
+	<wp:post_name>pildoras-ruby-n3-el-metodo-select</wp:post_name>
+	<wp:status>publish</wp:status>
+	<wp:post_parent>0</wp:post_parent>
+	<wp:menu_order>0</wp:menu_order>
+	<wp:post_type>post</wp:post_type>
+	<wp:post_password></wp:post_password>
+	<wp:is_sticky>0</wp:is_sticky>
+
+	
+		<wp:comment>
+			<wp:comment_id>comment.id</wp:comment_id>
+			
+				<wp:comment_author><![CDATA[hvergara]]></wp:comment_author>
+				<wp:comment_author_url><![CDATA[http://twitter.com/hvergara]]></wp:comment_author_url>
+			
+			<wp:comment_date>Tue May 03 17:01:13 -0700 2011</wp:comment_date>
+			<wp:comment_date_gmt>Tue May 03 17:01:13 -0700 2011</wp:comment_date_gmt>
+			<wp:comment_content><![CDATA[Ya que Ruby comparte varias similitudes con JavaScript:
+
+[1,2,3,4,5].filter(function(n) { return n % 2 == 0 }) == [2,4]
+
+y para objetos que son enumerables (NodeList por ejemplo, o cualquier Object)
+
+var divs = document.getElementsByTagName('div'); /* retorna [NodeList Object] */
+Array.prototype.filter.call(divs, function(node) { ..... })
+
+Sigue con las píldoras!
+Saludos!]]></wp:comment_content>
+			<wp:comment_approved>1</wp:comment_approved>
+			<wp:comment_type></wp:comment_type>
+			<wp:comment_parent>0</wp:comment_parent>
+		</wp:comment>
+	
+		<wp:comment>
+			<wp:comment_id>comment.id</wp:comment_id>
+			
+				<wp:comment_author><![CDATA[Jano González]]></wp:comment_author>
+			
+			<wp:comment_date>Tue May 03 17:07:33 -0700 2011</wp:comment_date>
+			<wp:comment_date_gmt>Tue May 03 17:07:33 -0700 2011</wp:comment_date_gmt>
+			<wp:comment_content><![CDATA[Excelente aporte Héctor! ]]></wp:comment_content>
+			<wp:comment_approved>1</wp:comment_approved>
+			<wp:comment_type></wp:comment_type>
+			<wp:comment_parent>0</wp:comment_parent>
+		</wp:comment>
+	
+		<wp:comment>
+			<wp:comment_id>comment.id</wp:comment_id>
+			
+				<wp:comment_author><![CDATA[niedbalski]]></wp:comment_author>
+				<wp:comment_author_url><![CDATA[http://twitter.com/niedbalski]]></wp:comment_author_url>
+			
+			<wp:comment_date>Thu May 12 13:14:09 -0700 2011</wp:comment_date>
+			<wp:comment_date_gmt>Thu May 12 13:14:09 -0700 2011</wp:comment_date_gmt>
+			<wp:comment_content><![CDATA[python way:
+&gt;&gt;&gt; x = [ 2, 4, 6, 7, 21]
+&gt;&gt;&gt; filter(lambda x: ( not x % 2 ), x)
+]]></wp:comment_content>
+			<wp:comment_approved>1</wp:comment_approved>
+			<wp:comment_type></wp:comment_type>
+			<wp:comment_parent>0</wp:comment_parent>
+		</wp:comment>
+	
+		<wp:comment>
+			<wp:comment_id>comment.id</wp:comment_id>
+			
+				<wp:comment_author><![CDATA[Jano González]]></wp:comment_author>
+			
+			<wp:comment_date>Thu May 12 14:52:44 -0700 2011</wp:comment_date>
+			<wp:comment_date_gmt>Thu May 12 14:52:44 -0700 2011</wp:comment_date_gmt>
+			<wp:comment_content><![CDATA[Gracias Jorge :) ]]></wp:comment_content>
+			<wp:comment_approved>1</wp:comment_approved>
+			<wp:comment_type></wp:comment_type>
+			<wp:comment_parent>0</wp:comment_parent>
+		</wp:comment>
+	
+</item>

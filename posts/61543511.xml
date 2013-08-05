@@ -1,0 +1,64 @@
+<item>
+	<title>Disponible Ruby 1.9.2-p290</title>
+	<link>http://old.gemaroja.com/disponible-ruby-192-p290</link>
+	<pubDate>Mon Jul 18 14:52:00 -0700 2011</pubDate>
+	
+	<dc:creator><![CDATA[Jano González]]></dc:creator>
+	
+	
+		<category domain="tag" nicename="noticias"><![CDATA[noticias]]></category>
+	
+
+	<category><![CDATA[Uncategorized]]></category>
+
+	<category domain="category" nicename="uncategorized"><![CDATA[Uncategorized]]></category>
+
+  <guid isPermaLink="false">http://old.gemaroja.com/disponible-ruby-192-p290</guid>
+	<description></description>
+	<content:encoded><![CDATA[<p>Desde este fin de semana está disponible la nueva versión de Ruby 1.9.2. El release resuelve varios bugs, entre ellos algunos memory leaks, <em>segfaults</em>, problemas con <a href="https://github.com/tenderlove/psych">psych</a>, problemas con <a href="http://ruby-doc.org/stdlib/libdoc/tk/rdoc/index.html">tk</a>, etc.</p>
+
+<p>Si usas <a href="https://rvm.beginrescueend.com/">RVM</a>, actualizarse es tan simple como bajar la última versión de RVM y actualizar Ruby 1.9.2</p>
+
+<div class="CodeRay">
+  <div class="code"><pre>rvm get head
+rvm reload
+rvm upgrade ruby-1.9.2-p180 ruby-1.9.2-p290</pre></div>
+</div>
+
+
+<p>Si usas Windows, <a href="http://rubyinstaller.org/downloads">RubyInstaller</a> ya fue actualizado con la nueva versión.</p>
+
+<p>Revisa el <a href="http://svn.ruby-lang.org/repos/ruby/tags/v1_9_2_290/ChangeLog">listado completo de cambios</a>.</p>
+
+<p>(vía <a href="http://www.rubyinside.com/ruby-1-9-2-p290-released-the-lowdown-on-rubys-latest-production-release-5145.html">Ruby Inside</a>)</p>]]></content:encoded>
+	<excerpt:encoded><![CDATA[Desde este fin de semana está disponible la nueva versión de Ruby 1.9.2. El release resuelve varios bugs, entre ellos algunos memory leaks, segfaults, problemas con psych, problemas con tk, etc. Si usas RVM, actualizarse es tan simple como bajar l...]]></excerpt:encoded>	
+
+	<wp:post_date>Mon Jul 18 14:52:00 -0700 2011</wp:post_date>
+	<wp:post_date_gmt>Mon Jul 18 14:52:00 -0700 2011</wp:post_date_gmt>
+	<wp:comment_status>open</wp:comment_status>
+	<wp:ping_status>open</wp:ping_status>
+	<wp:post_id>61543511</wp:post_id>
+	<wp:post_name>disponible-ruby-192-p290</wp:post_name>
+	<wp:status>publish</wp:status>
+	<wp:post_parent>0</wp:post_parent>
+	<wp:menu_order>0</wp:menu_order>
+	<wp:post_type>post</wp:post_type>
+	<wp:post_password></wp:post_password>
+	<wp:is_sticky>0</wp:is_sticky>
+
+	
+		<wp:comment>
+			<wp:comment_id>comment.id</wp:comment_id>
+			
+				<wp:comment_author><![CDATA[sebmaldo]]></wp:comment_author>
+				<wp:comment_author_url><![CDATA[http://twitter.com/sebmaldo]]></wp:comment_author_url>
+			
+			<wp:comment_date>Sun Jul 24 13:17:09 -0700 2011</wp:comment_date>
+			<wp:comment_date_gmt>Sun Jul 24 13:17:09 -0700 2011</wp:comment_date_gmt>
+			<wp:comment_content><![CDATA[Solo mencionar que es posible que ocurra un error al tratar de realizar el comando upgrade, se soluciona simplemente ejecutando el comando en una nueva consola.]]></wp:comment_content>
+			<wp:comment_approved>1</wp:comment_approved>
+			<wp:comment_type></wp:comment_type>
+			<wp:comment_parent>0</wp:comment_parent>
+		</wp:comment>
+	
+</item>

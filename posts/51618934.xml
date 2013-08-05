@@ -1,0 +1,61 @@
+<item>
+	<title>Píldoras Ruby Nº2: El método map</title>
+	<link>http://old.gemaroja.com/pildoras-ruby-n2-el-metodo-map</link>
+	<pubDate>Mon May 02 17:58:54 -0700 2011</pubDate>
+	
+	<dc:creator><![CDATA[Jano González]]></dc:creator>
+	
+	
+		<category domain="tag" nicename="p%C3%ADldoras"><![CDATA[píldoras]]></category>
+	
+
+	<category><![CDATA[Uncategorized]]></category>
+
+	<category domain="category" nicename="uncategorized"><![CDATA[Uncategorized]]></category>
+
+  <guid isPermaLink="false">http://old.gemaroja.com/pildoras-ruby-n2-el-metodo-map</guid>
+	<description></description>
+	<content:encoded><![CDATA[<p>Al momento de trabajar con objetos como arreglos y rangos, es común tener que aplicar una transformación sobre cada uno de los elementos. En Ruby todas las clases que incluyen el módulo <a href="http://www.ruby-doc.org/core/classes/Enumerable.html">Enumerable</a> nos permiten utilizar el método map, que al ser aplicado a un objeto enumerable produce un arreglo con los elementos transformados.</p>
+
+<p>Por ejemplo con un <a href="http://www.ruby-doc.org/core/classes/Array.html">Array</a>:</p>
+
+<div class="CodeRay">
+  <div class="code"><pre><span class="comment"># Produce el resultado [1,4,9,16,25]</span>
+[<span class="integer">1</span>,<span class="integer">2</span>,<span class="integer">3</span>,<span class="integer">4</span>,<span class="integer">5</span>].map { |n| n*n }</pre></div>
+</div>
+
+
+<p>También podemos hacer lo mismo con un <a href="http://www.ruby-doc.org/core/classes/Range.html">Range</a>:</p>
+
+<div class="CodeRay">
+  <div class="code"><pre><span class="comment"># Produce el resultado [1,4,9,16,25]</span>
+(<span class="integer">1</span>..<span class="integer">5</span>).map { |n| n*n }</pre></div>
+</div>
+
+
+<p>O con un <a href="http://www.ruby-doc.org/core/classes/Enumerable.html">Hash</a>:</p>
+
+<div class="CodeRay">
+  <div class="code"><pre><span class="comment"># Produce el resultado [1,4,9]</span>
+{ <span class="symbol">:a</span> =&gt; <span class="integer">1</span>, <span class="symbol">:b</span> =&gt; <span class="integer">2</span>, <span class="symbol">:c</span> =&gt; <span class="integer">3</span>}.map { |k,v| v * v }</pre></div>
+</div>
+
+
+<p>¡Pronto nuevas píldoras! Y recuerda que esta semana tendremos nuevas noticias de la <a href="http://www.startechconf.com/">StarTechConf 2011</a>.</p>]]></content:encoded>
+	<excerpt:encoded><![CDATA[Al momento de trabajar con objetos como arreglos y rangos, es común tener que aplicar una transformación sobre cada uno de los elementos. En Ruby todas las clases que incluyen el módulo Enumerable nos permiten utilizar el método map, que al se...]]></excerpt:encoded>	
+
+	<wp:post_date>Mon May 02 17:58:54 -0700 2011</wp:post_date>
+	<wp:post_date_gmt>Mon May 02 17:58:54 -0700 2011</wp:post_date_gmt>
+	<wp:comment_status>open</wp:comment_status>
+	<wp:ping_status>open</wp:ping_status>
+	<wp:post_id>51618934</wp:post_id>
+	<wp:post_name>pildoras-ruby-n2-el-metodo-map</wp:post_name>
+	<wp:status>publish</wp:status>
+	<wp:post_parent>0</wp:post_parent>
+	<wp:menu_order>0</wp:menu_order>
+	<wp:post_type>post</wp:post_type>
+	<wp:post_password></wp:post_password>
+	<wp:is_sticky>0</wp:is_sticky>
+
+	
+</item>

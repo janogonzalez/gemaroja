@@ -1,0 +1,90 @@
+<item>
+	<title>Noviembre, mes de conferencias: La Gira Ruby Sur 2011</title>
+	<link>http://old.gemaroja.com/noviembre-mes-de-conferencias-la-gira-ruby-su</link>
+	<pubDate>Thu Apr 21 14:44:00 -0700 2011</pubDate>
+	
+	<dc:creator><![CDATA[Jano González]]></dc:creator>
+	
+	
+		<category domain="tag" nicename="comunidad"><![CDATA[comunidad]]></category>
+	
+		<category domain="tag" nicename="conferencias"><![CDATA[conferencias]]></category>
+	
+
+	<category><![CDATA[Uncategorized]]></category>
+
+	<category domain="category" nicename="uncategorized"><![CDATA[Uncategorized]]></category>
+
+  <guid isPermaLink="false">http://old.gemaroja.com/noviembre-mes-de-conferencias-la-gira-ruby-su</guid>
+	<description></description>
+	<content:encoded><![CDATA[<p>Noviembre será un gran mes para los desarrolladores Ruby del Cono Sur, tendremos 4 conferencias en distintos países que unirán esfuerzos bajo el concepto de la <a href="http://tour.rubysur.org/">Gira Ruby Sur 2011</a>:</p>
+
+<ul>
+<li>4 y 5 de noviembre: <a href="http://www.startechconf.com/">StarTechConf</a> en Santiago, Chile.</li>
+<li>9 y 10 de noviembre: <a href="http://www.rubyconfuruguay.org/">RubyConf Uruguay</a> en Montevideo.</li>
+<li>noviembre sin fecha exacta: <a href="http://ruby.com.ar/">RubyConf Argentina</a> en Buenos Aires.</li>
+<li>noviembre sin fecha exacta: <a href="http://www.rubyconf.com.br/">RubyConf Brasil</a> en Sao Paulo.</li>
+</ul>
+
+
+<p>Cabe destacar que la StarTechConf es el primer evento de este tipo realizado en Chile y que la próxima semana entrevistaremos a su <a href="http://twitter.com/#!/coto">creador</a>.</p>
+
+<p>Un gran panorama nos espera a fin de año ¡Comiencen desde ya a juntar dinero para ir a todas!</p>]]></content:encoded>
+	<excerpt:encoded><![CDATA[Noviembre será un gran mes para los desarrolladores Ruby del Cono Sur, tendremos 4 conferencias en distintos países que unirán esfuerzos bajo el concepto de la Gira Ruby Sur 2011: 4 y 5 de noviembre: StarTechConf en Santiago, Chile. 9 y 10 de n...]]></excerpt:encoded>	
+
+	<wp:post_date>Thu Apr 21 14:44:00 -0700 2011</wp:post_date>
+	<wp:post_date_gmt>Thu Apr 21 14:44:00 -0700 2011</wp:post_date_gmt>
+	<wp:comment_status>open</wp:comment_status>
+	<wp:ping_status>open</wp:ping_status>
+	<wp:post_id>50363505</wp:post_id>
+	<wp:post_name>noviembre-mes-de-conferencias-la-gira-ruby-su</wp:post_name>
+	<wp:status>publish</wp:status>
+	<wp:post_parent>0</wp:post_parent>
+	<wp:menu_order>0</wp:menu_order>
+	<wp:post_type>post</wp:post_type>
+	<wp:post_password></wp:post_password>
+	<wp:is_sticky>0</wp:is_sticky>
+
+	
+		<wp:comment>
+			<wp:comment_id>comment.id</wp:comment_id>
+			
+				<wp:comment_author><![CDATA[matiasow]]></wp:comment_author>
+				<wp:comment_author_url><![CDATA[http://becloudy.com]]></wp:comment_author_url>
+			
+			<wp:comment_date>Sat Apr 30 08:55:58 -0700 2011</wp:comment_date>
+			<wp:comment_date_gmt>Sat Apr 30 08:55:58 -0700 2011</wp:comment_date_gmt>
+			<wp:comment_content><![CDATA[RubyConf Argentina ya tiene fecha! Será el 7 y 8 de noviembre de 2011 en Buenos Aires!]]></wp:comment_content>
+			<wp:comment_approved>1</wp:comment_approved>
+			<wp:comment_type></wp:comment_type>
+			<wp:comment_parent>0</wp:comment_parent>
+		</wp:comment>
+	
+		<wp:comment>
+			<wp:comment_id>comment.id</wp:comment_id>
+			
+				<wp:comment_author><![CDATA[Jano González]]></wp:comment_author>
+			
+			<wp:comment_date>Sat Apr 30 09:06:11 -0700 2011</wp:comment_date>
+			<wp:comment_date_gmt>Sat Apr 30 09:06:11 -0700 2011</wp:comment_date_gmt>
+			<wp:comment_content><![CDATA[Excelente, haré un nuevo post porque además se unió BogotáConf.]]></wp:comment_content>
+			<wp:comment_approved>1</wp:comment_approved>
+			<wp:comment_type></wp:comment_type>
+			<wp:comment_parent>0</wp:comment_parent>
+		</wp:comment>
+	
+		<wp:comment>
+			<wp:comment_id>comment.id</wp:comment_id>
+			
+				<wp:comment_author><![CDATA[Martin Aceto]]></wp:comment_author>
+				<wp:comment_author_url><![CDATA[http://www.backing-online.com]]></wp:comment_author_url>
+			
+			<wp:comment_date>Wed Oct 19 08:34:33 -0700 2011</wp:comment_date>
+			<wp:comment_date_gmt>Wed Oct 19 08:34:33 -0700 2011</wp:comment_date_gmt>
+			<wp:comment_content><![CDATA[También esta el Ruby FunDay que se organiza el domingo anterior a la conferencia.]]></wp:comment_content>
+			<wp:comment_approved>1</wp:comment_approved>
+			<wp:comment_type></wp:comment_type>
+			<wp:comment_parent>0</wp:comment_parent>
+		</wp:comment>
+	
+</item>

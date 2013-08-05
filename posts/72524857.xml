@@ -1,0 +1,101 @@
+<item>
+	<title>Dando los primeros pasos en Ruby</title>
+	<link>http://old.gemaroja.com/dando-los-primeros-pasos-en-ruby</link>
+	<pubDate>Mon Sep 26 15:28:25 -0700 2011</pubDate>
+	
+	<dc:creator><![CDATA[Jano González]]></dc:creator>
+	
+	
+		<category domain="tag" nicename="tutoriales"><![CDATA[tutoriales]]></category>
+	
+
+	<category><![CDATA[Uncategorized]]></category>
+
+	<category domain="category" nicename="uncategorized"><![CDATA[Uncategorized]]></category>
+
+  <guid isPermaLink="false">http://old.gemaroja.com/dando-los-primeros-pasos-en-ruby</guid>
+	<description></description>
+	<content:encoded><![CDATA[<p>Cada vez hay más desarrolladores interesados en aprender Ruby. Si eres uno de ellos, esta guía es para ti.</p>
+
+<p>La guía asume que ya eres capaz de programar en algún otro lenguaje y es bastante similar a la forma en que yo comencé a aprender.</p>
+
+<h1>Paso 0</h1>
+
+<p>Si tienes 15 minutos libres, puedes probar Ruby desde tu navegador sin necesidad de instalar nada en <a href="http://tryruby.org/">Try Ruby!</a>. Aprenderás la sintaxis básica y seguramente te engancharás lo suficiente como para seguir el resto de los pasos.</p>
+
+<h1>Paso 1</h1>
+
+<p>La mejor manera de aprender un lenguaje de programación es programando, por lo tanto instala un intérprete de Ruby:</p>
+
+<ul>
+<li><p>Mac OS X: Ya viene uno instalado</p></li>
+<li><p>Linux: Instala Ruby con tu administrador de paquetes preferido, por ejemplo en Ubuntu debes ejecutar</p>
+
+<div class="CodeRay">
+  <div class="code"><pre>sudo apt-get install ruby irb rdoc</pre></div>
+</div>
+</li>
+<li><p>Windows: Descarga <a href="http://rubyinstaller.org/">RubyInstaller</a> y sigue los pasos</p></li>
+</ul>
+
+
+<p>Ahora que tienes un intérprete de Ruby instalado, baja los <a href="http://rubykoans.com/">Ruby Koans</a> y resuélvelos todos. Los Ruby Koans consisten en corregir tests para aprender sobre el lenguaje y su biblioteca estándar.</p>
+
+<p>Si no quieres instalar software, puedes ejecutar los <a href="http://koans.heroku.com/">Ruby Koans desde tu navegador</a>.</p>
+
+<h1>Paso 2</h1>
+
+<p>Inscríbete en la <a href="http://groups.google.com/group/rubysur/subscribe">lista de correo</a> de <a href="http://rubysur.org/">Ruby Sur</a>. También comienza a participar en los meetups para acelerar tu aprendizaje, por ejemplo:</p>
+
+<ul>
+<li>Argentina: <a href="http://ruby.com.ar/">http://ruby.com.ar/</a></li>
+<li>Chile: <a href="http://www.meetup.com/dynlangchile/">http://www.meetup.com/dynlangchile/</a></li>
+</ul>
+
+
+<h1>Paso 3.a</h1>
+
+<p>Si eres de los que espera hasta el último minuto para aprender desde el libro, entonces practica Ruby aprendiendo su uso con una aplicación real. Por ejemplo puedes seguir el excelente <a href="http://ruby.railstutorial.org/ruby-on-rails-tutorial-book">Rails Tutorial</a> y aprender Ruby a través de la construcción de una aplicación web con Ruby on Rails.</p>
+
+<p>Luego puedes usar un libro de referencia como <a href="http://shop.oreilly.com/product/9780596516178.do">The Ruby Programming Language</a> para pulir tus skills. También es recomendable <a href="http://www.amazon.com/gp/product/0321584104">Eloquent Ruby</a> para aprender algunos &ldquo;idioms&rdquo;.</p>
+
+<h1>Paso 3.b</h1>
+
+<p>Si te gusta complementar tu aprendizaje con un libro desde el primer momento, puedes usar el clásico <a href="http://pragprog.com/book/ruby3/programming-ruby-1-9">&ldquo;Pickaxe&rdquo;</a>. Cuando te sientas confortable con el lenguaje puedes probar el paso 3.a.</p>
+
+<h1>Al infinito y más allá</h1>
+
+<p>Comienza a usar Ruby en tu trabajo o en proyectos personales, comienza un nuevo blog sobre Ruby, si no hay meetups en tu ciudad comienza uno tu mismo, etc. ¡Las posibilidades son ilimitadas!</p>]]></content:encoded>
+	<excerpt:encoded><![CDATA[Cada vez hay más desarrolladores interesados en aprender Ruby. Si eres uno de ellos, esta guía es para ti. La guía asume que ya eres capaz de programar en algún otro lenguaje y es bastante similar a la forma en que yo comencé a aprender. Paso...]]></excerpt:encoded>	
+
+	<wp:post_date>Mon Sep 26 15:28:25 -0700 2011</wp:post_date>
+	<wp:post_date_gmt>Mon Sep 26 15:28:25 -0700 2011</wp:post_date_gmt>
+	<wp:comment_status>open</wp:comment_status>
+	<wp:ping_status>open</wp:ping_status>
+	<wp:post_id>72524857</wp:post_id>
+	<wp:post_name>dando-los-primeros-pasos-en-ruby</wp:post_name>
+	<wp:status>publish</wp:status>
+	<wp:post_parent>0</wp:post_parent>
+	<wp:menu_order>0</wp:menu_order>
+	<wp:post_type>post</wp:post_type>
+	<wp:post_password></wp:post_password>
+	<wp:is_sticky>0</wp:is_sticky>
+
+	
+		<wp:comment>
+			<wp:comment_id>comment.id</wp:comment_id>
+			
+				<wp:comment_author><![CDATA[Alter]]></wp:comment_author>
+				<wp:comment_author_url><![CDATA[http://chillanejonz.blogspot.com]]></wp:comment_author_url>
+			
+			<wp:comment_date>Mon Sep 26 16:27:43 -0700 2011</wp:comment_date>
+			<wp:comment_date_gmt>Mon Sep 26 16:27:43 -0700 2011</wp:comment_date_gmt>
+			<wp:comment_content><![CDATA[Los ruby koans la otra vez los había empezado a hacer, están super buenos, pero después los deje.
+Tambien había cachado en su momento http://railsforzombies.org/ que estaba entrete y tambien lo deje... esto de la procastinacion, en fin.
+Super buen post, saludos]]></wp:comment_content>
+			<wp:comment_approved>1</wp:comment_approved>
+			<wp:comment_type></wp:comment_type>
+			<wp:comment_parent>0</wp:comment_parent>
+		</wp:comment>
+	
+</item>

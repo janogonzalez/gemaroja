@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8'>
+<link href='../../../exports.css' rel='stylesheet'>
+<link href='../../../exports.css' rel='stylesheet'>
+
+</head>
+<body>
+<div id='wrap'>
+<div id='header'>
+<h1>Gema Roja</h1>
+<h2>This is an archived post
+This is an archived post
+</h2>
+</div>
+<div id='content'><div id='nav'>
+<a href="../../../posts/2011/05/geocodificacion-simple-con-ruby-geocoder.html">Previous</a>
+&nbsp; 
+<a href="../../../index-3.html">Index</a>
+&nbsp; 
+<a href="../../../posts/2011/05/la-lista-de-correo-ruby-sur-se-muda-a-google.html">Next</a>
+</div>
+<div class='post'>
+<div class='post_header'>
+<h3>Píldoras Ruby Nº4: El método sort y el operador operador <=></h3>
+<div class='post_info'>
+<span class='post_time'>May 12 2011,  3:13 PM</span>
+<span class='author'>&nbsp;by Jano González</span>
+</div>
+</div>
+<div class='post_body'><p>Un método muy útil del módulo <a href="http://www.ruby-doc.org/core/classes/Enumerable.html">Enumerable</a> es <a href="http://www.ruby-doc.org/core/classes/Enumerable.html#M001480">sort</a>, que nos entrega un <a href="http://www.ruby-doc.org/core/classes/Array.html">Array</a> con los elementos ordenados, por ejemplo:</p>
+
+<div class="CodeRay">
+  <div class="code"><pre><span class="comment"># Ordena los Strings en forma lexicográfica</span>
+[<span class="string"><span class="delimiter">&quot;</span><span class="content">ruby</span><span class="delimiter">&quot;</span></span>, <span class="string"><span class="delimiter">&quot;</span><span class="content">enumerable</span><span class="delimiter">&quot;</span></span>, <span class="string"><span class="delimiter">&quot;</span><span class="content">array</span><span class="delimiter">&quot;</span></span>].sort</pre></div>
+</div>
+
+
+<p>Sin embargo, muchas veces queremos ordenar objetos dado el valor de un atributo, por ejemplo ordenar un grupo de strings por tamaño. Para casos como el anterior, el método sort admite un bloque con el código que realiza la comparación, por ejemplo:</p>
+
+<div class="CodeRay">
+  <div class="code"><pre><span class="comment"># Ordena los Strings por tamaño</span>
+[<span class="string"><span class="delimiter">&quot;</span><span class="content">ruby</span><span class="delimiter">&quot;</span></span>, <span class="string"><span class="delimiter">&quot;</span><span class="content">enumerable</span><span class="delimiter">&quot;</span></span>, <span class="string"><span class="delimiter">&quot;</span><span class="content">array</span><span class="delimiter">&quot;</span></span>].sort { |x, y| x.length &lt;=&gt; y.length }</pre></div>
+</div>
+
+
+<p>En este caso utilizamos el operador <code>&lt;=&gt;</code>, que compara dos objetos y nos entrega el resultado de esa comparación de la siguiente forma:</p>
+
+<div class="CodeRay">
+  <div class="code"><pre><span class="comment"># Retorna 1 porque el objeto de la izquierda es mayor que el de la derecha</span>
+<span class="integer">100</span> &lt;=&gt; <span class="integer">50</span>
+
+<span class="comment"># Retorna -1 porque el objeto de la izquierda es menos que el de la derecha</span>
+<span class="integer">50</span> &lt;=&gt; <span class="integer">100</span>
+
+<span class="comment"># Retorna 0 porque los objetos son iguales</span>
+<span class="integer">100</span> &lt;=&gt; <span class="integer">100</span></pre></div>
+</div>
+
+
+<p>¡Pronto nuevas píldoras! Y recuerda contarle a tus amigos de nuestro sitio :).</p></div>
+<div class='post_tags'>
+<h4>Tags</h4>
+<div class='post_tags_list'>píldoras</div>
+</div>
+<div class='post_responses'>
+<h4>415 views and 5 responses</h4>
+<ul class='post_responses list'>
+<li class='response clearfix'>
+<div class='response_header'>
+<div class='response_time'>May 12 2011,  3:34 PM</div>
+<div class='response_name'>Felipe Espinoza responded:</div>
+</div>
+<div class='response_body'>te faltó agregar un dato del mismo módulo y método, por ejemplo, dada mi clase A<p>class A<br />  attr_accessor :a, :b</p><p>def initialize(a, b)<br />    @a = a<br />    @b = b<br />  end<br />end</p><p>y un arreglo de A's</p><p>array = [A.new(1,2), A.new(5,1), A.new(3,3)]</p><p>hago array.sort # => ArgumentError: comparison of A with A failed<br />from a.rb:18:in `sort'</p><p>ahora incluyendo el módulo Enumerable y definiendo el método &lt;=>, puedo usar sort y otros métodos el módulo enumerable</p><p>class A<br />  attr_accessor :a, :b<br />  include Enumerable</p><p>def initialize(a, b)<br />    @a = a<br />    @b = b<br />  end</p><p>def &lt;=>(other)<br />    @a &lt;=> other.a<br />  end</p><p>#para hacer más visual el orden<br />   def to_s<br />    "(#@a, #@b)"<br />  end<br />end</p><p>donde </p><p>ar = [A.new(1,2), A.new(5,1), A.new(3,3)]</p><p>ar #=> [(1, 2), (5, 1), (3, 3)]</p><p>ar.sort  # => [(1, 2), (3, 3), (5, 1)]</p></div>
+</li>
+<li class='response clearfix'>
+<div class='response_header'>
+<div class='response_time'>May 12 2011,  3:38 PM</div>
+<div class='response_name'>Felipe Espinoza responded:</div>
+</div>
+<div class='response_body'>o sea, un dato extra con esos 2 elementos de ruby que mencionas<p><pre><br />     que fome que se rompiera la identacion del codigo<br /></pre></p></div>
+</li>
+<li class='response clearfix'>
+<div class='response_header'>
+<div class='response_time'>May 12 2011,  4:28 PM</div>
+<div class='response_name'>Jano González responded:</div>
+</div>
+<div class='response_body'>Tu comentario es otra píldora en si mismo :). Que bueno es cuando se genera feedback con la gente que visita el blog!<p>PD: Parece que en los comentarios no soporta identación</p></div>
+</li>
+<li class='response clearfix'>
+<div class='response_header'>
+<div class='response_time'>May 12 2011,  5:49 PM</div>
+<div class='response_name'>Felipe Espinoza responded:</div>
+</div>
+<div class='response_body'>el campo de texto acepta el tag "<pre>", pero no decía al momento de postar</pre></div>
+</li>
+<li class='response clearfix'>
+<div class='response_header'>
+<div class='response_time'>May 12 2011,  5:49 PM</div>
+<div class='response_name'>Felipe Espinoza responded:</div>
+</div>
+<div class='response_body'>&lt; pre ></div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>

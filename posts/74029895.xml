@@ -1,0 +1,149 @@
+<item>
+	<title>Aprendiendo Ruby Nº1: Objetos, objetos en todos lados</title>
+	<link>http://old.gemaroja.com/aprendiendo-ruby-n1-objetos-objetos-en-todos</link>
+	<pubDate>Tue Oct 04 16:11:00 -0700 2011</pubDate>
+	
+	<dc:creator><![CDATA[Jano González]]></dc:creator>
+	
+	
+		<category domain="tag" nicename="aprendiendo+ruby"><![CDATA[aprendiendo ruby]]></category>
+	
+		<category domain="tag" nicename="tutorial"><![CDATA[tutorial]]></category>
+	
+
+	<category><![CDATA[Uncategorized]]></category>
+
+	<category domain="category" nicename="uncategorized"><![CDATA[Uncategorized]]></category>
+
+  <guid isPermaLink="false">http://old.gemaroja.com/aprendiendo-ruby-n1-objetos-objetos-en-todos</guid>
+	<description></description>
+	<content:encoded><![CDATA[<p>Te damos la bienvenida a esta nueva serie de tutoriales de iniciación en el lenguaje Ruby. Cada entrega será una <em>micro-lección</em> e incluirá ejercicios para que estudies por tu cuenta.</p>
+
+<p><strong>IMPORTANTE</strong>: Esta serie asume que programas en algún otro lenguaje y que estás usando la versión 1.9.2 de Ruby.</p>
+
+<h2>Objetos, objetos en todos lados</h2>
+
+<p>En Ruby todos los valores que manipulamos son objetos, desde un simple entero hasta una compleja estructura de datos. Para comprobarlo iniciemos <code>irb</code> para jugar con los objetos más básicos:</p>
+
+<div class="CodeRay">
+  <div class="code"><pre>$ irb</pre></div>
+</div>
+
+
+<p>Una vez dentro de la consola, prueba cada una de estas líneas:</p>
+
+<div class="CodeRay">
+  <div class="code"><pre><span class="comment"># El valor 100</span>
+<span class="integer">100</span>
+
+<span class="comment"># Podemos invocar un método sobre el objeto</span>
+<span class="integer">100</span>.next
+
+<span class="comment"># El objeto tiene una clase</span>
+<span class="integer">100</span>.class
+
+<span class="comment"># Nos indica si el número es par</span>
+<span class="integer">100</span>.even?</pre></div>
+</div>
+
+
+<p>Usando el operador <code>.</code> podemos invocar métodos en un objeto, en este caso el método <code>next</code> nos entregó el siguiente entero, el método <code>class</code> nos indicó que el objeto pertenece a la clase <a href="http://ruby-doc.org/core/Fixnum.html">FixNum</a> y finalmente el método <code>even?</code> nos indicó que el número es par. Cabe señalar que es una convención en Ruby que los métodos cuyo nombre termina con el caracter <code>?</code> entreguen un valor booleano (verdadero o false).</p>
+
+<p>Ahora probemos otros ejemplos sencillos:</p>
+
+<div class="CodeRay">
+  <div class="code"><pre><span class="comment"># Podemos encadenar llamadas</span>
+<span class="integer">100</span>.next.next
+
+<span class="comment"># Cuál es la clase de una clase?</span>
+<span class="integer">100</span>.class.class</pre></div>
+</div>
+
+
+<p>Como los métodos retornan otro objeto, podemos invocar otro método sobre ese resultado, encadenando las llamadas. En Ruby las clases también son objetos, más específicamente son instancias de la clase <a href="http://ruby-doc.org/core/Class.html">Class</a>.</p>
+
+<p>También existen métodos con tratamiento especial:</p>
+
+<div class="CodeRay">
+  <div class="code"><pre><span class="comment"># El método + suma dos números</span>
+<span class="integer">99</span>.+(<span class="integer">1</span>)
+
+<span class="comment"># Pero es un poco más cómodo escribir...</span>
+<span class="integer">99</span> + <span class="integer">1</span></pre></div>
+</div>
+
+
+<p>En el ejemplo anterior se aprecia que los operadores en Ruby en realidad son llamadas a métodos.</p>
+
+<p>Existen otras formas de declarar literales numéricos:</p>
+
+<div class="CodeRay">
+  <div class="code"><pre><span class="comment"># Es posible separar dígitos con _ para mejorar la legibilidad</span>
+<span class="integer">24_500_123_932</span>
+
+<span class="comment"># Literales binarios</span>
+<span class="integer">0b1111</span>
+<span class="integer">0</span><span class="constant">B1111</span>
+
+<span class="comment"># Literales octales</span>
+<span class="integer">0755</span>
+
+<span class="comment"># Literales hexadecimales</span>
+<span class="integer">0x1337</span>
+<span class="integer">0</span><span class="constant">X1337</span>
+
+<span class="comment"># También se puede usar _ cuando declaramos números en otras bases</span>
+<span class="integer">0b1010_1010</span></pre></div>
+</div>
+
+
+<h3>Resumen</h3>
+
+<p>Con estos simples ejemplos aprendimos varias cosas:</p>
+
+<ul>
+<li>Es posible instanciar algunos objetos usando valores literales.</li>
+<li>Todos los valores que manipulamos en Ruby son objetos.</li>
+<li>Hay operadores que en realidad son llamadas a métodos.</li>
+<li>Existen varias formas de declarar literales numéricos.</li>
+</ul>
+
+
+<h3>Ejercicios</h3>
+
+<ul>
+<li>Descubre qué otros métodos de tipo operador tiene la clase <a href="http://ruby-doc.org/core/Fixnum.html">FixNum</a> y realiza algunos cálculos sencillos con ellos.</li>
+<li>Prueba encadenar otras combinaciones de métodos.</li>
+<li>Prueba los ejemplos de esta lección usando los literales <code>100.0</code> y <code>10_000_000_000_000_000_000</code>, ¿Qué diferencias notas?</li>
+</ul>]]></content:encoded>
+	<excerpt:encoded><![CDATA[Te damos la bienvenida a esta nueva serie de tutoriales de iniciación en el lenguaje Ruby. Cada entrega será una micro-lección e incluirá ejercicios para que estudies por tu cuenta. IMPORTANTE: Esta serie asume que programas en algún otro len...]]></excerpt:encoded>	
+
+	<wp:post_date>Tue Oct 04 16:11:00 -0700 2011</wp:post_date>
+	<wp:post_date_gmt>Tue Oct 04 16:11:00 -0700 2011</wp:post_date_gmt>
+	<wp:comment_status>open</wp:comment_status>
+	<wp:ping_status>open</wp:ping_status>
+	<wp:post_id>74029895</wp:post_id>
+	<wp:post_name>aprendiendo-ruby-n1-objetos-objetos-en-todos</wp:post_name>
+	<wp:status>publish</wp:status>
+	<wp:post_parent>0</wp:post_parent>
+	<wp:menu_order>0</wp:menu_order>
+	<wp:post_type>post</wp:post_type>
+	<wp:post_password></wp:post_password>
+	<wp:is_sticky>0</wp:is_sticky>
+
+	
+		<wp:comment>
+			<wp:comment_id>comment.id</wp:comment_id>
+			
+				<wp:comment_author><![CDATA[Ben Orenstein ]]></wp:comment_author>
+				<wp:comment_author_url><![CDATA[]]></wp:comment_author_url>
+			
+			<wp:comment_date>Thu Oct 06 05:29:38 -0700 2011</wp:comment_date>
+			<wp:comment_date_gmt>Thu Oct 06 05:29:38 -0700 2011</wp:comment_date_gmt>
+			<wp:comment_content><![CDATA[Grácias por este léccion!]]></wp:comment_content>
+			<wp:comment_approved>1</wp:comment_approved>
+			<wp:comment_type></wp:comment_type>
+			<wp:comment_parent>0</wp:comment_parent>
+		</wp:comment>
+	
+</item>

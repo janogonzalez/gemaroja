@@ -1,0 +1,48 @@
+<item>
+	<title>Compilado de noticias</title>
+	<link>http://old.gemaroja.com/compilado-de-noticias</link>
+	<pubDate>Mon Jul 11 17:51:00 -0700 2011</pubDate>
+	
+	<dc:creator><![CDATA[Jano González]]></dc:creator>
+	
+	
+		<category domain="tag" nicename="comunidad"><![CDATA[comunidad]]></category>
+	
+		<category domain="tag" nicename="conferencias"><![CDATA[conferencias]]></category>
+	
+		<category domain="tag" nicename="noticias"><![CDATA[noticias]]></category>
+	
+
+	<category><![CDATA[Uncategorized]]></category>
+
+	<category domain="category" nicename="uncategorized"><![CDATA[Uncategorized]]></category>
+
+  <guid isPermaLink="false">http://old.gemaroja.com/compilado-de-noticias</guid>
+	<description></description>
+	<content:encoded><![CDATA[<p>¡Hola Rubystas!</p>
+
+<p>Acá va un compilado de noticias interesantes:</p>
+
+<ul>
+<li><p>Gana un ticket para <a href="http://www.magmarails.com/">Magma Rails</a>: Si vives en México o planeas darte una vuelta por allá en Octubre, participa en el concurso organizado por <a href="https://github.com/">GitHub</a> para tener una entrada gratis a la conferencia <a href="http://www.magmarails.com/">Magma Rails</a>. Mira los detalles en el <a href="https://github.com/blog/884-magma-rails-ticket-give-away">anuncio del concurso</a>.</p></li>
+<li><p>Últimos días para proponer tu charla en la <a href="http://www.startechconf.com/">StarTech Conf</a>: El 31 de julio cierran las postulaciones para ser charlista en la conferencia tecnológica más grande de Chile, <a href="https://startechconf.wufoo.com/forms/startechconf-talk-proposal/">llena el formulario acá</a> y saca la cara por Ruby :)</p></li>
+<li><p>Compite y gana en <a href="http://rallyonrails.com/">Rally on Rails</a>: Ya están abiertas las inscripciones, ¿qué equipo conseguirá crear la mejor aplicación Ruby on Rails en 48 horas?, ¡tal vez sea el tuyo! <a href="http://rallyonrails.com/">Inscríbete acá</a>.</p></li>
+<li><p><a href="http://startupdigest.com/chile/">Startup Digest Chile</a>: Los últimos eventos para startups en Chile recopilados por <a href="http://twitter.com/cleiva">Carlos Leiva</a>, entérate de lo último en la escena local <a href="http://startupdigest.com/chile/">inscribiéndote acá</a>.</p></li>
+</ul>]]></content:encoded>
+	<excerpt:encoded><![CDATA[Hola Rubystas! Acá va un compilado de noticias interesantes: Gana un ticket para Magma Rails: Si vives en México o planeas darte una vuelta por allá en Octubre, participa en el concurso organizado por GitHub para tener una entrada gratis a la ...]]></excerpt:encoded>	
+
+	<wp:post_date>Mon Jul 11 17:51:00 -0700 2011</wp:post_date>
+	<wp:post_date_gmt>Mon Jul 11 17:51:00 -0700 2011</wp:post_date_gmt>
+	<wp:comment_status>open</wp:comment_status>
+	<wp:ping_status>open</wp:ping_status>
+	<wp:post_id>60592411</wp:post_id>
+	<wp:post_name>compilado-de-noticias</wp:post_name>
+	<wp:status>publish</wp:status>
+	<wp:post_parent>0</wp:post_parent>
+	<wp:menu_order>0</wp:menu_order>
+	<wp:post_type>post</wp:post_type>
+	<wp:post_password></wp:post_password>
+	<wp:is_sticky>0</wp:is_sticky>
+
+	
+</item>

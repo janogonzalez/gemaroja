@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8'>
+<link href='../../../exports.css' rel='stylesheet'>
+<link href='../../../exports.css' rel='stylesheet'>
+
+</head>
+<body>
+<div id='wrap'>
+<div id='header'>
+<h1>Gema Roja</h1>
+<h2>This is an archived post
+This is an archived post
+</h2>
+</div>
+<div id='content'><div id='nav'>
+<a href="../../../posts/2011/05/la-gira-ruby-sur-rubyconf-brasil-confirma-fec.html">Previous</a>
+&nbsp; 
+<a href="../../../index-3.html">Index</a>
+&nbsp; 
+<a href="../../../posts/2011/05/pildoras-ruby-n4-el-metodo-sort-y-el-operador.html">Next</a>
+</div>
+<div class='post'>
+<div class='post_header'>
+<h3>Geocodificación simple con Ruby Geocoder</h3>
+<div class='post_info'>
+<span class='post_time'>May 16 2011,  3:21 PM</span>
+<span class='author'>&nbsp;by Jano González</span>
+</div>
+</div>
+<div class='post_body'><p>En las aplicaciones actuales, las funcionalidades relacionadas con la localización geográfica son cada vez más comunes. En Ruby existen varias gemas que nos pueden ayudar, pero una de las más sencillas y poderosas es <a href="http://www.rubygeocoder.com/">Ruby Geocoder</a>.</p>
+
+<p>Para instalarla basta con ejecutar:</p>
+
+<div class="CodeRay">
+  <div class="code"><pre>gem install geocoder</pre></div>
+</div>
+
+
+<p>Para probar la correcta instalación, podemos ejecutar la utilidad de línea de comandos que viene incluída:</p>
+
+<div class="CodeRay">
+  <div class="code"><pre>geocode &quot;Providencia 1373, Providencia, Santiago&quot;</pre></div>
+</div>
+
+
+<p>Geocoder permite geolocalizar direcciones e IPs:</p>
+
+<div class="CodeRay">
+  <div class="code"><pre>require <span class="string"><span class="delimiter">'</span><span class="content">geocoder</span><span class="delimiter">'</span></span>
+
+<span class="comment"># Entrega la primera coincidencia para la dirección entregada</span>
+lugar = <span class="constant">Geocoder</span>.search(<span class="string"><span class="delimiter">&quot;</span><span class="content">Providencia 1373, Providencia, Santiago</span><span class="delimiter">&quot;</span></span>)[<span class="integer">0</span>]
+
+<span class="comment"># Entrega una ubicación aproximada dada la IP</span>
+ubicacion = <span class="constant">Geocoder</span>.search(<span class="string"><span class="delimiter">&quot;</span><span class="content">184.106.20.99</span><span class="delimiter">&quot;</span></span>)</pre></div>
+</div>
+
+
+<p>También es posible la geolocalización inversa:</p>
+
+<div class="CodeRay">
+  <div class="code"><pre>require <span class="string"><span class="delimiter">'</span><span class="content">geocoder</span><span class="delimiter">'</span></span>
+
+<span class="comment"># Entrega la primera coincidencia para las coordenadas entregadas</span>
+direccion = <span class="constant">Geocoder</span>.search(<span class="string"><span class="delimiter">&quot;</span><span class="content">-33.4282616,-70.6190645</span><span class="delimiter">&quot;</span></span>)[<span class="integer">0</span>]</pre></div>
+</div>
+
+
+<p>Además, la gema se integra con <a href="http://ar.rubyonrails.org/">ActiveRecord</a> y <a href="http://mongoid.org/">Mongoid</a>. Por ejemplo:</p>
+
+<div class="CodeRay">
+  <div class="code"><pre><span class="comment"># app/models/bar.rb</span>
+geocoded_by <span class="symbol">:direccion</span>
+after_validation <span class="symbol">:geocode</span>,
+  <span class="symbol">:if</span> =&gt; lambda{ |obj| obj.address_changed? }</pre></div>
+</div>
+
+
+<p>Para conocer más sobre esta gema y ver usos más avanzados visita la <a href="http://www.rubygeocoder.com/">página oficial</a>.</p></div>
+<div class='post_tags'>
+<h4>Tags</h4>
+<div class='post_tags_list'>gemas</div>
+</div>
+<div class='post_responses'>
+<h4>542 views and 2 responses</h4>
+<ul class='post_responses list'>
+<li class='response clearfix'>
+<div class='response_header'>
+<div class='response_time'>Feb 26 2012,  8:02 AM</div>
+<div class='response_name'>Iván responded:</div>
+</div>
+<div class='response_body'>Para <br />require 'geocoder'<br /># Entrega la primera coincidencia para las coordenadas entregadas<br />direccion = Geocoder.search("-33.4282616,-70.6190645")[0]<p>Un puts direccion produce<br />#&lt;geocoder::result::google:0xa38d7a4></p><p>¿Como tengo acceso al valor o a los valores de dirección? Quizá sea una novatada. Espero podás ayudarme</p></div>
+</li>
+<li class='response clearfix'>
+<div class='response_header'>
+<div class='response_time'>Feb 26 2012,  8:15 AM</div>
+<div class='response_name'>Iván responded:</div>
+</div>
+<div class='response_body'>Lo dicho. El resultado es un objeto. He debido hacer puts dirección.address en lugar de puts direccion.<br />Las propiedades del objeto Geocoder::Result están en la documentación.</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8'>
+<link href='../../../exports.css' rel='stylesheet'>
+<link href='../../../exports.css' rel='stylesheet'>
+
+</head>
+<body>
+<div id='wrap'>
+<div id='header'>
+<h1>Gema Roja</h1>
+<h2>This is an archived post
+This is an archived post
+</h2>
+</div>
+<div id='content'><div id='nav'>
+<a href="../../../posts/2011/05/pildoras-ruby-n3-el-metodo-select.html">Previous</a>
+&nbsp; 
+<a href="../../../index-3.html">Index</a>
+&nbsp; 
+<a href="../../../posts/2011/04/novedades-de-la-gira-ruby-sur-2011.html">Next</a>
+</div>
+<div class='post'>
+<div class='post_header'>
+<h3>Píldoras Ruby Nº2: El método map</h3>
+<div class='post_info'>
+<span class='post_time'>May  2 2011,  5:58 PM</span>
+<span class='author'>&nbsp;by Jano González</span>
+</div>
+</div>
+<div class='post_body'><p>Al momento de trabajar con objetos como arreglos y rangos, es común tener que aplicar una transformación sobre cada uno de los elementos. En Ruby todas las clases que incluyen el módulo <a href="http://www.ruby-doc.org/core/classes/Enumerable.html">Enumerable</a> nos permiten utilizar el método map, que al ser aplicado a un objeto enumerable produce un arreglo con los elementos transformados.</p>
+
+<p>Por ejemplo con un <a href="http://www.ruby-doc.org/core/classes/Array.html">Array</a>:</p>
+
+<div class="CodeRay">
+  <div class="code"><pre><span class="comment"># Produce el resultado [1,4,9,16,25]</span>
+[<span class="integer">1</span>,<span class="integer">2</span>,<span class="integer">3</span>,<span class="integer">4</span>,<span class="integer">5</span>].map { |n| n*n }</pre></div>
+</div>
+
+
+<p>También podemos hacer lo mismo con un <a href="http://www.ruby-doc.org/core/classes/Range.html">Range</a>:</p>
+
+<div class="CodeRay">
+  <div class="code"><pre><span class="comment"># Produce el resultado [1,4,9,16,25]</span>
+(<span class="integer">1</span>..<span class="integer">5</span>).map { |n| n*n }</pre></div>
+</div>
+
+
+<p>O con un <a href="http://www.ruby-doc.org/core/classes/Enumerable.html">Hash</a>:</p>
+
+<div class="CodeRay">
+  <div class="code"><pre><span class="comment"># Produce el resultado [1,4,9]</span>
+{ <span class="symbol">:a</span> =&gt; <span class="integer">1</span>, <span class="symbol">:b</span> =&gt; <span class="integer">2</span>, <span class="symbol">:c</span> =&gt; <span class="integer">3</span>}.map { |k,v| v * v }</pre></div>
+</div>
+
+
+<p>¡Pronto nuevas píldoras! Y recuerda que esta semana tendremos nuevas noticias de la <a href="http://www.startechconf.com/">StarTechConf 2011</a>.</p></div>
+<div class='post_tags'>
+<h4>Tags</h4>
+<div class='post_tags_list'>píldoras</div>
+</div>
+<div class='post_responses'>
+<h4>554 views and 0 responses</h4>
+<ul class='post_responses list'>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>

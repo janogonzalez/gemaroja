@@ -1,0 +1,37 @@
+<item>
+	<title>Rails 3.0.9</title>
+	<link>http://old.gemaroja.com/rails-309</link>
+	<pubDate>Thu Jun 16 06:37:00 -0700 2011</pubDate>
+	
+	<dc:creator><![CDATA[Jano González]]></dc:creator>
+	
+	
+		<category domain="tag" nicename="rails"><![CDATA[rails]]></category>
+	
+
+	<category><![CDATA[Uncategorized]]></category>
+
+	<category domain="category" nicename="uncategorized"><![CDATA[Uncategorized]]></category>
+
+  <guid isPermaLink="false">http://old.gemaroja.com/rails-309</guid>
+	<description></description>
+	<content:encoded><![CDATA[<p>Ya está disponible la nueva versión de <a href="http://rubyonrails.org">Ruby on Rails</a>, que principalmente corrige problemas relacionados a la modificación de SafeBuffers.</p>
+
+<p><a href="http://weblog.rubyonrails.org/2011/6/16/ann-rails-3-0-9-has-been-released">Ver el anuncio original</a></p>]]></content:encoded>
+	<excerpt:encoded><![CDATA[Ya está disponible la nueva versión de Ruby on Rails, que principalmente corrige problemas relacionados a la modificación de SafeBuffers. Ver el anuncio original]]></excerpt:encoded>	
+
+	<wp:post_date>Thu Jun 16 06:37:00 -0700 2011</wp:post_date>
+	<wp:post_date_gmt>Thu Jun 16 06:37:00 -0700 2011</wp:post_date_gmt>
+	<wp:comment_status>open</wp:comment_status>
+	<wp:ping_status>open</wp:ping_status>
+	<wp:post_id>57402524</wp:post_id>
+	<wp:post_name>rails-309</wp:post_name>
+	<wp:status>publish</wp:status>
+	<wp:post_parent>0</wp:post_parent>
+	<wp:menu_order>0</wp:menu_order>
+	<wp:post_type>post</wp:post_type>
+	<wp:post_password></wp:post_password>
+	<wp:is_sticky>0</wp:is_sticky>
+
+	
+</item>

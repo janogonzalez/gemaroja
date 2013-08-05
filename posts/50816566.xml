@@ -1,0 +1,49 @@
+<item>
+	<title>Píldoras Ruby Nº1: Literales binarios</title>
+	<link>http://old.gemaroja.com/pildoras-ruby-n1-literales-binarios</link>
+	<pubDate>Mon Apr 25 18:19:08 -0700 2011</pubDate>
+	
+	<dc:creator><![CDATA[Jano González]]></dc:creator>
+	
+	
+		<category domain="tag" nicename="p%C3%ADldoras"><![CDATA[píldoras]]></category>
+	
+
+	<category><![CDATA[Uncategorized]]></category>
+
+	<category domain="category" nicename="uncategorized"><![CDATA[Uncategorized]]></category>
+
+  <guid isPermaLink="false">http://old.gemaroja.com/pildoras-ruby-n1-literales-binarios</guid>
+	<description></description>
+	<content:encoded><![CDATA[<p>Una característica que me gusta mucho de Ruby es la posibilidad de declarar literales binarios, por ejemplo declaremos una máscara de bits así:</p>
+
+<div class="CodeRay">
+  <div class="code"><pre><span class="constant">BITMASK</span> = <span class="integer">0b10000000</span></pre></div>
+</div>
+
+
+<p>Y como Ruby permite usar el símbolo _ (underscore) como separador de dígitos, por ejemplo podemos  separar los bits en grupos de 4 dejando la máscara mucho más legible:</p>
+
+<div class="CodeRay">
+  <div class="code"><pre><span class="constant">BITMASK</span> = <span class="integer">0b1000_0000</span></pre></div>
+</div>
+
+
+<p>¡Pronto nuevas píldoras! Y recuerda que esta semana tendrás un reporte de la <a href="http://www.meetup.com/dynlangchile/events/17362464/">4ª Junta Ruby del Grupo de Lenguajes Dinámicos de Chile</a> y noticias de la <a href="http://www.startechconf.com/">StarTechConf 2011</a>.</p>]]></content:encoded>
+	<excerpt:encoded><![CDATA[Una característica que me gusta mucho de Ruby es la posibilidad de declarar literales binarios, por ejemplo declaremos una máscara de bits así: BITMASK = 0b10000000 Y como Ruby permite usar el símbolo _ (underscore) como separador de dígitos,...]]></excerpt:encoded>	
+
+	<wp:post_date>Mon Apr 25 18:19:08 -0700 2011</wp:post_date>
+	<wp:post_date_gmt>Mon Apr 25 18:19:08 -0700 2011</wp:post_date_gmt>
+	<wp:comment_status>open</wp:comment_status>
+	<wp:ping_status>open</wp:ping_status>
+	<wp:post_id>50816566</wp:post_id>
+	<wp:post_name>pildoras-ruby-n1-literales-binarios</wp:post_name>
+	<wp:status>publish</wp:status>
+	<wp:post_parent>0</wp:post_parent>
+	<wp:menu_order>0</wp:menu_order>
+	<wp:post_type>post</wp:post_type>
+	<wp:post_password></wp:post_password>
+	<wp:is_sticky>0</wp:is_sticky>
+
+	
+</item>

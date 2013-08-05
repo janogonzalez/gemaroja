@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8'>
+<link href='../../../exports.css' rel='stylesheet'>
+<link href='../../../exports.css' rel='stylesheet'>
+
+</head>
+<body>
+<div id='wrap'>
+<div id='header'>
+<h1>Gema Roja</h1>
+<h2>This is an archived post
+This is an archived post
+</h2>
+</div>
+<div id='content'><div id='nav'>
+<a href="../../../posts/2011/07/pildoras-ruby-n7-el-metodo-compact.html">Previous</a>
+&nbsp; 
+<a href="../../../index-2.html">Index</a>
+&nbsp; 
+<a href="../../../posts/2011/07/disponible-ruby-192-p290.html">Next</a>
+</div>
+<div class='post'>
+<div class='post_header'>
+<h3>ennnnnd</h3>
+<div class='post_info'>
+<span class='post_time'>July 19 2011,  3:06 PM</span>
+<span class='author'>&nbsp;by Jano González</span>
+</div>
+</div>
+<div class='post_body'><p>El <a href="http://redmine.ruby-lang.org/issues/5054">feature 5054</a> fue abierto para solicitar que se incorpore una &ldquo;mejora&rdquo; al lenguaje Ruby, que evita cerrar repetidamente bloques de código.</p>
+
+<p>Por ejemplo, el siguiente código:</p>
+
+<div class="CodeRay">
+  <div class="code"><pre><span class="keyword">module</span> <span class="class">MyModule</span>
+  <span class="keyword">class</span> <span class="class">MyClass</span>
+    <span class="keyword">def</span> <span class="function">my_method</span>
+      <span class="integer">10</span>.times <span class="keyword">do</span>
+        <span class="keyword">if</span> rand &lt; <span class="float">0.5</span> 
+          p <span class="symbol">:small</span>
+        <span class="keyword">end</span> 
+      <span class="keyword">end</span> 
+    <span class="keyword">end</span> 
+  <span class="keyword">end</span> 
+<span class="keyword">end</span></pre></div>
+</div>
+
+
+<p>Quedaría como:</p>
+
+<div class="CodeRay">
+  <div class="code"><pre><span class="keyword">module</span> <span class="class">MyModule</span>
+  <span class="keyword">class</span> <span class="class">MyClass</span>
+    <span class="keyword">def</span> <span class="function">my_method</span>
+      <span class="integer">10</span>.times <span class="keyword">do</span>
+        <span class="keyword">if</span> rand &lt; <span class="float">0.5</span> 
+          p <span class="symbol">:small</span>
+        ennnnnd</pre></div>
+</div>
+
+
+<p>Al parecer el ambiente de la <a href="http://rubykaigi.org/2011/en">RubyKaigi</a> estuvo muy cargado al alcohol este año :P.</p>
+
+<p>Otra locura de la RubyKaigi: Aaron <a href="http://www.twitter.com/tenderlove">Tenderlove</a> Patterson, core commiter de Ruby y de Rails, llevando el concepto de Code Kata a un nuevo nivel en el <a href="http://www.youtube.com/watch?v=BJ_opstRvpM">trailer de su película</a>.</p></div>
+<div class='post_tags'>
+<h4>Tags</h4>
+<div class='post_tags_list'>humor</div>
+</div>
+<div class='post_responses'>
+<h4>277 views and 0 responses</h4>
+<ul class='post_responses list'>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>

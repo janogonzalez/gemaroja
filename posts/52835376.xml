@@ -1,0 +1,182 @@
+<item>
+	<title>Píldoras Ruby Nº4: El método sort y el operador operador &lt;=&gt;</title>
+	<link>http://old.gemaroja.com/pildoras-ruby-n4-el-metodo-sort-y-el-operador</link>
+	<pubDate>Thu May 12 15:13:00 -0700 2011</pubDate>
+	
+	<dc:creator><![CDATA[Jano González]]></dc:creator>
+	
+	
+		<category domain="tag" nicename="p%C3%ADldoras"><![CDATA[píldoras]]></category>
+	
+
+	<category><![CDATA[Uncategorized]]></category>
+
+	<category domain="category" nicename="uncategorized"><![CDATA[Uncategorized]]></category>
+
+  <guid isPermaLink="false">http://old.gemaroja.com/pildoras-ruby-n4-el-metodo-sort-y-el-operador</guid>
+	<description></description>
+	<content:encoded><![CDATA[<p>Un método muy útil del módulo <a href="http://www.ruby-doc.org/core/classes/Enumerable.html">Enumerable</a> es <a href="http://www.ruby-doc.org/core/classes/Enumerable.html#M001480">sort</a>, que nos entrega un <a href="http://www.ruby-doc.org/core/classes/Array.html">Array</a> con los elementos ordenados, por ejemplo:</p>
+
+<div class="CodeRay">
+  <div class="code"><pre><span class="comment"># Ordena los Strings en forma lexicográfica</span>
+[<span class="string"><span class="delimiter">&quot;</span><span class="content">ruby</span><span class="delimiter">&quot;</span></span>, <span class="string"><span class="delimiter">&quot;</span><span class="content">enumerable</span><span class="delimiter">&quot;</span></span>, <span class="string"><span class="delimiter">&quot;</span><span class="content">array</span><span class="delimiter">&quot;</span></span>].sort</pre></div>
+</div>
+
+
+<p>Sin embargo, muchas veces queremos ordenar objetos dado el valor de un atributo, por ejemplo ordenar un grupo de strings por tamaño. Para casos como el anterior, el método sort admite un bloque con el código que realiza la comparación, por ejemplo:</p>
+
+<div class="CodeRay">
+  <div class="code"><pre><span class="comment"># Ordena los Strings por tamaño</span>
+[<span class="string"><span class="delimiter">&quot;</span><span class="content">ruby</span><span class="delimiter">&quot;</span></span>, <span class="string"><span class="delimiter">&quot;</span><span class="content">enumerable</span><span class="delimiter">&quot;</span></span>, <span class="string"><span class="delimiter">&quot;</span><span class="content">array</span><span class="delimiter">&quot;</span></span>].sort { |x, y| x.length &lt;=&gt; y.length }</pre></div>
+</div>
+
+
+<p>En este caso utilizamos el operador <code>&lt;=&gt;</code>, que compara dos objetos y nos entrega el resultado de esa comparación de la siguiente forma:</p>
+
+<div class="CodeRay">
+  <div class="code"><pre><span class="comment"># Retorna 1 porque el objeto de la izquierda es mayor que el de la derecha</span>
+<span class="integer">100</span> &lt;=&gt; <span class="integer">50</span>
+
+<span class="comment"># Retorna -1 porque el objeto de la izquierda es menos que el de la derecha</span>
+<span class="integer">50</span> &lt;=&gt; <span class="integer">100</span>
+
+<span class="comment"># Retorna 0 porque los objetos son iguales</span>
+<span class="integer">100</span> &lt;=&gt; <span class="integer">100</span></pre></div>
+</div>
+
+
+<p>¡Pronto nuevas píldoras! Y recuerda contarle a tus amigos de nuestro sitio :).</p>]]></content:encoded>
+	<excerpt:encoded><![CDATA[Un método muy útil del módulo Enumerable es sort, que nos entrega un Array con los elementos ordenados, por ejemplo: # Ordena los Strings en forma lexicográfica ["ruby", "enumerable", "array"].sort Sin embargo, muchas veces queremos ordenar ob...]]></excerpt:encoded>	
+
+	<wp:post_date>Thu May 12 15:13:00 -0700 2011</wp:post_date>
+	<wp:post_date_gmt>Thu May 12 15:13:00 -0700 2011</wp:post_date_gmt>
+	<wp:comment_status>open</wp:comment_status>
+	<wp:ping_status>open</wp:ping_status>
+	<wp:post_id>52835376</wp:post_id>
+	<wp:post_name>pildoras-ruby-n4-el-metodo-sort-y-el-operador</wp:post_name>
+	<wp:status>publish</wp:status>
+	<wp:post_parent>0</wp:post_parent>
+	<wp:menu_order>0</wp:menu_order>
+	<wp:post_type>post</wp:post_type>
+	<wp:post_password></wp:post_password>
+	<wp:is_sticky>0</wp:is_sticky>
+
+	
+		<wp:comment>
+			<wp:comment_id>comment.id</wp:comment_id>
+			
+				<wp:comment_author><![CDATA[Felipe Espinoza]]></wp:comment_author>
+			
+			<wp:comment_date>Thu May 12 15:34:37 -0700 2011</wp:comment_date>
+			<wp:comment_date_gmt>Thu May 12 15:34:37 -0700 2011</wp:comment_date_gmt>
+			<wp:comment_content><![CDATA[te faltó agregar un dato del mismo módulo y método, por ejemplo, dada mi clase A
+
+class A
+  attr_accessor :a, :b
+
+  def initialize(a, b)
+    @a = a
+    @b = b
+  end
+end
+
+y un arreglo de A's
+
+array = [A.new(1,2), A.new(5,1), A.new(3,3)]
+
+hago array.sort # =&gt; ArgumentError: comparison of A with A failed
+from a.rb:18:in `sort'
+
+ahora incluyendo el módulo Enumerable y definiendo el método &lt;=&gt;, puedo usar sort y otros métodos el módulo enumerable
+
+class A
+  attr_accessor :a, :b
+  include Enumerable
+
+  def initialize(a, b)
+    @a = a
+    @b = b
+  end
+
+  def &lt;=&gt;(other)
+    @a &lt;=&gt; other.a
+  end
+
+  #para hacer más visual el orden
+   def to_s
+    &quot;(#@a, #@b)&quot;
+  end
+end
+
+donde 
+
+ar = [A.new(1,2), A.new(5,1), A.new(3,3)]
+
+ar #=&gt; [(1, 2), (5, 1), (3, 3)]
+
+ar.sort  # =&gt; [(1, 2), (3, 3), (5, 1)]]]></wp:comment_content>
+			<wp:comment_approved>1</wp:comment_approved>
+			<wp:comment_type></wp:comment_type>
+			<wp:comment_parent>0</wp:comment_parent>
+		</wp:comment>
+	
+		<wp:comment>
+			<wp:comment_id>comment.id</wp:comment_id>
+			
+				<wp:comment_author><![CDATA[Felipe Espinoza]]></wp:comment_author>
+			
+			<wp:comment_date>Thu May 12 15:38:14 -0700 2011</wp:comment_date>
+			<wp:comment_date_gmt>Thu May 12 15:38:14 -0700 2011</wp:comment_date_gmt>
+			<wp:comment_content><![CDATA[o sea, un dato extra con esos 2 elementos de ruby que mencionas
+
+&lt;pre&gt;
+     que fome que se rompiera la identacion del codigo
+&lt;/pre&gt;]]></wp:comment_content>
+			<wp:comment_approved>1</wp:comment_approved>
+			<wp:comment_type></wp:comment_type>
+			<wp:comment_parent>0</wp:comment_parent>
+		</wp:comment>
+	
+		<wp:comment>
+			<wp:comment_id>comment.id</wp:comment_id>
+			
+				<wp:comment_author><![CDATA[Jano González]]></wp:comment_author>
+			
+			<wp:comment_date>Thu May 12 16:28:03 -0700 2011</wp:comment_date>
+			<wp:comment_date_gmt>Thu May 12 16:28:03 -0700 2011</wp:comment_date_gmt>
+			<wp:comment_content><![CDATA[Tu comentario es otra píldora en si mismo :). Que bueno es cuando se genera feedback con la gente que visita el blog!
+
+PD: Parece que en los comentarios no soporta identación 
+]]></wp:comment_content>
+			<wp:comment_approved>1</wp:comment_approved>
+			<wp:comment_type></wp:comment_type>
+			<wp:comment_parent>0</wp:comment_parent>
+		</wp:comment>
+	
+		<wp:comment>
+			<wp:comment_id>comment.id</wp:comment_id>
+			
+				<wp:comment_author><![CDATA[Felipe Espinoza]]></wp:comment_author>
+			
+			<wp:comment_date>Thu May 12 17:49:42 -0700 2011</wp:comment_date>
+			<wp:comment_date_gmt>Thu May 12 17:49:42 -0700 2011</wp:comment_date_gmt>
+			<wp:comment_content><![CDATA[el campo de texto acepta el tag &quot;&lt;pre&gt;&quot;, pero no decía al momento de postar]]></wp:comment_content>
+			<wp:comment_approved>1</wp:comment_approved>
+			<wp:comment_type></wp:comment_type>
+			<wp:comment_parent>0</wp:comment_parent>
+		</wp:comment>
+	
+		<wp:comment>
+			<wp:comment_id>comment.id</wp:comment_id>
+			
+				<wp:comment_author><![CDATA[Felipe Espinoza]]></wp:comment_author>
+			
+			<wp:comment_date>Thu May 12 17:49:51 -0700 2011</wp:comment_date>
+			<wp:comment_date_gmt>Thu May 12 17:49:51 -0700 2011</wp:comment_date_gmt>
+			<wp:comment_content><![CDATA[&lt; pre &gt;]]></wp:comment_content>
+			<wp:comment_approved>1</wp:comment_approved>
+			<wp:comment_type></wp:comment_type>
+			<wp:comment_parent>0</wp:comment_parent>
+		</wp:comment>
+	
+</item>

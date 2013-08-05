@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8'>
+<link href='../../../exports.css' rel='stylesheet'>
+<link href='../../../exports.css' rel='stylesheet'>
+
+</head>
+<body>
+<div id='wrap'>
+<div id='header'>
+<h1>Gema Roja</h1>
+<h2>This is an archived post
+This is an archived post
+</h2>
+</div>
+<div id='content'><div id='nav'>
+<a href="../../../posts/2011/06/reporte-de-la-5-junta-de-ruby-del-meetup-de-l.html">Previous</a>
+&nbsp; 
+<a href="../../../index-3.html">Index</a>
+&nbsp; 
+<a href="../../../posts/2011/05/chile-5-junta-de-ruby-el-martes-07062011.html">Next</a>
+</div>
+<div class='post'>
+<div class='post_header'>
+<h3>Manejando distintas versiones de Ruby con RVM</h3>
+<div class='post_info'>
+<span class='post_time'>May 28 2011,  4:23 PM</span>
+<span class='author'>&nbsp;by Jano González</span>
+</div>
+</div>
+<div class='post_body'><p><a href="https://rvm.beginrescueend.com/">RVM</a> es una herramienta que nos permite instalar y usar distintas versiones de Ruby en nuestra máquina, algo muy práctico si por ejemplo tenemos algunos proyectos con Ruby 1.8.7 y otros con 1.9.2, o si queremos probar otros intérpretes como <a href="http://rubini.us/">Rubinius</a> o <a href="http://www.jruby.org/">JRuby</a>.</p>
+
+<p>RVM está disponible para sistemas tipo UNIX (Por ej. <a href="http://www.ubuntu.com/">Ubuntu</a>, <a href="http://www.apple.com/es/macosx/">Mac OS X</a>, etc). Si usas Windows puedes usar <a href="https://github.com/vertiginous/pik">pik</a>, aunque carece de funcionalidades avanzadas como los <a href="https://rvm.beginrescueend.com/gemsets/basics/">gemsets</a>.</p>
+
+<h1>Instalación</h1>
+
+<p>Para instalar RVM necesitas tener al menos <a href="http://git-scm.com/">git</a>, <a href="http://curl.haxx.se/">curl</a> y <a href="http://www.gnu.org/software/bash/">bash</a>. La instalación más típica se realiza con:</p>
+
+<div class="CodeRay">
+  <div class="code"><pre>bash &lt; &lt;(curl -s https://rvm.beginrescueend.com/install/rvm)</pre></div>
+</div>
+
+
+<p>Lo anterior instalará RVM en la carpeta <code>.rvm</code> del usuario. Posteriormente debemos disponibilizar el comando <code>rvm</code>, por ejemplo si usamos bash:</p>
+
+<div class="CodeRay">
+  <div class="code"><pre>echo '[[ -s &quot;$HOME/.rvm/scripts/rvm&quot; ]] &amp;&amp; . &quot;$HOME/.rvm/scripts/rvm&quot; # Load RVM function' &gt;&gt; ~/.bash_profile
+source .bash_profile</pre></div>
+</div>
+
+
+<p>Podemos chequear la correcta instalación con:</p>
+
+<div class="CodeRay">
+  <div class="code"><pre>type rvm | head -1</pre></div>
+</div>
+
+
+<p>El comando anterior debería tener la salida <code>rvm is a shell function</code>.</p>
+
+<p>Cuando instalamos un nuevo intérprete Ruby, RVM baja sus fuentes y lo compila. Dependiendo del sistema operativo que utilicemos, necesitaremos instalar algunos paquetes que nos permitirán compilar los intérpretes, por ejemplo en Mac OS X necesitamos tener al menos la versión 3.2.1 de <a href="http://developer.apple.com/xcode/">XCode</a>. Las instrucciones respecto a que paquetes instalar para el sistema que usamos se obtienen con:</p>
+
+<div class="CodeRay">
+  <div class="code"><pre>rvm notes</pre></div>
+</div>
+
+
+<p>Una vez que tengamos los pre-requisitos de nuestro sistema, podremos instalar distintos intérpretes de Ruby en nuestra máquina.</p>
+
+<h1>Uso básico</h1>
+
+<p>Podemos ver todos los intérpretes de Ruby disponibles con:</p>
+
+<div class="CodeRay">
+  <div class="code"><pre>rvm list known</pre></div>
+</div>
+
+
+<p>Instalar nuevos intérpretes es muy sencillo. Por ejemplo, para instalar Ruby 1.9.2, ejecutamos:</p>
+
+<div class="CodeRay">
+  <div class="code"><pre>rvm install 1.9.2</pre></div>
+</div>
+
+
+<p>Para usar el nuevo Ruby que hemos instalado, ejecutamos:</p>
+
+<div class="CodeRay">
+  <div class="code"><pre>rvm use 1.9.2</pre></div>
+</div>
+
+
+<p>Opcionalmente, podemos configurarlo como el Ruby por omisión del sistema:</p>
+
+<div class="CodeRay">
+  <div class="code"><pre>rvm use 1.9.2 --default</pre></div>
+</div>
+
+
+<p>Para saber que Ruby estamos usando actualmente, ejecutamos:</p>
+
+<div class="CodeRay">
+  <div class="code"><pre>rvm current</pre></div>
+</div>
+
+
+<p>RVM tiene un desarrollo muy activo, para actualizarnos a la última versión en su repositorio git ejecutamos:</p>
+
+<div class="CodeRay">
+  <div class="code"><pre>rvm get head
+rvm reload</pre></div>
+</div>
+
+
+<h1>Gemsets</h1>
+
+<p>RVM nos permite generar entornos completamente aislados para nuestros proyectos, cada uno con sus propias gemas. Estos entornos son llamados gemsets.</p>
+
+<p>Para crear un nuevo gemset, ejecutamos:</p>
+
+<div class="CodeRay">
+  <div class="code"><pre>rvm gemset create mi_nuevo_gemset</pre></div>
+</div>
+
+
+<p>Para usarlo, ejecutamos:</p>
+
+<div class="CodeRay">
+  <div class="code"><pre>rvm gemset use mi_nuevo_gemset</pre></div>
+</div>
+
+
+<p>Podemos comprobar que tiene sus propias gemas ejecutando:</p>
+
+<div class="CodeRay">
+  <div class="code"><pre>gem list</pre></div>
+</div>
+
+
+<p>Para listar todos los gemsets, usamos:</p>
+
+<div class="CodeRay">
+  <div class="code"><pre>rvm gemset list</pre></div>
+</div>
+
+
+<p>Podemos crear un archivo <code>.rvmrc</code> para cada uno de nuestros proyectos, el que cambiará el intérprete Ruby y el gemset a utilizar cuando entremos al directorio del proyecto. Por ejemplo:</p>
+
+<div class="CodeRay">
+  <div class="code"><pre>cd mi_proyecto
+echo &quot;rvm 1.9.2@mi_nuevo_gemset&quot; &gt; .rvmrc
+rvm rvmrc trust</pre></div>
+</div>
+
+
+<p>Luego confirmamos que confiamos en el .rvmrc y listo. También disponemos de una forma rápida de crear un gemset y su <code>.rvmrc</code></p>
+
+<div class="CodeRay">
+  <div class="code"><pre>cd otro_proyecto
+rvm --create --rvmrc 1.9.2@otro_gemset</pre></div>
+</div>
+
+
+<h1>Otras funcionalidades</h1>
+
+<p>RVM tiene muchas otras funcionalidades, por ejemplo con:</p>
+
+<div class="CodeRay">
+  <div class="code"><pre>rvm ruby mi_programa.rb</pre></div>
+</div>
+
+
+<p>Podemos ejecutar un programa Ruby con todos los intérpretes que tengamos instalados.</p>
+
+<p>Para revisar todo lo que puede hacer RVM visita su <a href="https://rvm.beginrescueend.com/">página oficial</a>.</p>
+
+<h1>Palabras finales</h1>
+
+<p>RVM es una herramienta fundamental para los que desarrollamos en Ruby, tener varias versiones de Ruby y distintos gemsets sin conflicto nos facilita la vida.</p>
+
+<p>En próximos posts revisaremos las características distintivas de los intérpretes de Ruby más populares, ¡hasta entonces!</p></div>
+<div class='post_tags'>
+<h4>Tags</h4>
+<div class='post_tags_list'>herramientas, tutorial</div>
+</div>
+<div class='post_responses'>
+<h4>923 views and 0 responses</h4>
+<ul class='post_responses list'>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>
